@@ -3,7 +3,7 @@ Inloggen op de Linux server
 
 ## Key-terms
 SSH  
-Virtual Machine
+Virtual Machine  
 Key File
 ## Opdracht
 ### Gebruikte bronnen
@@ -16,5 +16,5 @@ Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestu
 ### Resultaat
 Connection established.
 
-![eerste connectie](techgrounds-Basholleboom/01_Linux_1/setup1)  
-![tweede connectie na verplaatsting key](techgrounds-Basholleboom/01_Linux_1/setup2)
+![eerste connectie](01_Linux_1/setup1)  
+![tweede connectie na verplaatsting key](01_Linux_1/setup2)

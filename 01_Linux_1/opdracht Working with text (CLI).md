@@ -18,7 +18,7 @@ stout (standard output)
 invoegen van nieuwe zin
 
 
-![invoegen van nieuwe zin](/01_Linux_1/images/invoeren meer tekst.PNG)  
+![invoegen van nieuwe zin](../01_Linux_1/images/invoeren meer tekst.PNG)  
 
 invoeren en zoeken zin met 'techgrounds'
 

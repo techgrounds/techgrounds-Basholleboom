@@ -27,4 +27,4 @@ invoeren en zoeken zin met 'techgrounds'
 
 Vinden en redirecten zin met 'techgrounds'
 
-[Vinden en redirecten zin met 'techgrounds'](../01_Linux_1/images/redirect.png)
+[Vinden en redirecten zin met 'techgrounds'](../01_Linux_1/images/redirect.PNG)

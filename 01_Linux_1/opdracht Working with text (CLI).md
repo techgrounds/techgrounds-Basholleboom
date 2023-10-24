@@ -1,4 +1,4 @@
-# Files & Directories
+# Working with text (CLI)
 werken in documenten
 
 ## Key-terms

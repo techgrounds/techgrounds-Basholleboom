@@ -6,7 +6,7 @@
 
 ## Opdracht
 ### Gebruikte bronnen
-[installatie check SSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)
+[installatie check SSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)  
 [uitleg commands](https://www.clickittech.com/aws/connect-ec2-instance-using-ssh/)
 
 ### Ervaren problemen
@@ -15,5 +15,5 @@ Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestu
 ### Resultaat
 Connection established.
 
-![eerste connectie](C:\Users\basho\Documents\GitHub\techgrounds-Basholleboom\01_Linux_1\setup1)
-![tweede connectie na verplaatsting key](C:\Users\basho\Documents\GitHub\techgrounds-Basholleboom\01_Linux_1\setup2)
+![eerste connectie](C:/Users/basho/Documents/GitHub/techgrounds-Basholleboom/01_Linux_1/setup1)  
+![tweede connectie na verplaatsting key](C:/Users/basho/Documents/GitHub/techgrounds-Basholleboom/01_Linux_1/setup2)

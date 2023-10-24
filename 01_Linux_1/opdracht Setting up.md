@@ -1,5 +1,5 @@
-# [Onderwerp]
-[Geef een korte beschrijving van het onderwerp]
+# Setting up
+Inloggen op de Linux server
 
 ## Key-terms
 [Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
@@ -15,5 +15,5 @@ Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestu
 ### Resultaat
 Connection established.
 
-![eerste connectie](C:/Users/basho/Documents/GitHub/techgrounds-Basholleboom/01_Linux_1/setup1)  
-![tweede connectie na verplaatsting key](C:/Users/basho/Documents/GitHub/techgrounds-Basholleboom/01_Linux_1/setup2)
+![eerste connectie](GitHub/techgrounds-Basholleboom/01_Linux_1/setup1)  
+![tweede connectie na verplaatsting key](GitHub/techgrounds-Basholleboom/01_Linux_1/setup2)

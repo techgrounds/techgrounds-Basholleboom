@@ -19,9 +19,11 @@ invoegen van nieuwe zin
 
 
 ![invoegen van nieuwe zin](/01_Linux_1/images/invoeren meer tekst.PNG)  
+
 invoeren en zoeken zin met 'techgrounds'
 
 ![invoeren en zoeken zin met 'techgrounds'](/01_Linux_1/images/invoeging+zoeken techgrounds.PNG)  
+
 Vinden en redirecten zin met 'techgrounds'
 
 [Vinden en redirecten zin met 'techgrounds'](/01_Linux_1/images/redirect.png)

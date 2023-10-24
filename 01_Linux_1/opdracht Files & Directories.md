@@ -26,3 +26,5 @@ aanmaak file met tekst
 relatieve en absolute navigatie
 
 ![relatieve en absolute navigatie](/01_Linux_1/images/relative+absolute.PNG)
+
+![katten ofzo](/00_includes/screenshot-s3.png)

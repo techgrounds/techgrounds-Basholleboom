@@ -16,7 +16,13 @@ tilde (~) as alias for home directory
 Eerste poging om mijn huidige working directory te vinden: help in command prompt; werkte niet, daarna gegoogled.
 
 ### Resultaat
-current working directory, list, aanmaak nieuwe directory 'techgrounds  
+current working directory, list, aanmaak nieuwe directory 'techgrounds'
+
+
 ![current working directory, list, aanmaak nieuwe directory 'techgrounds'](/01_Linux_1/images/pwd+directory-creation+list.PNG)  
-aanmaak file met tekst  ![aanmaak file met tekst](/01_Linux_1/images/file+text.PNG)  
+aanmaak file met tekst
+
+![aanmaak file met tekst](/01_Linux_1/images/file+text.PNG)  
+relatieve en absolute navigatie
+
 ![relatieve en absolute navigatie](/01_Linux_1/images/relative+absolute.PNG)

@@ -10,10 +10,10 @@ sudo - geeft iemand tijdelijk root
 sudo uitleg binnen cmd  
 ![sudo uitleg binnen cmd](01_Linux_1\opdracht 6 Users & Groups.md)  
 [add users and give them password](https://support.stackpath.com/hc/en-us/articles/360025308732-Add-Users-to-a-Virtual-Machine)  
-[cheatsheet linux commands](https://phoenixnap.com/kb/linux-commands-cheat-sheet#users-and-groups)
-
+[cheatsheet linux commands](https://phoenixnap.com/kb/linux-commands-cheat-sheet#users-and-groups)  
+[shadow file informatie over password](https://linuxize.com/post/etc-shadow-file/)
 ### Ervaren problemen
-
+Begreep vraag vinden van user files niet goed; heb medestudenten om hulp gevraagd.
 
 ### Resultaat
 met sudo adduser <naam> nieuwe user toegevoegd, vroeg automatisch om aanmaak password  

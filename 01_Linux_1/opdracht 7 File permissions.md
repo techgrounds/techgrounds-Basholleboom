@@ -12,7 +12,7 @@ de laatste 9 karakters van de tiencijferige code voor een document na een ls-l l
 [wikipedia chmod](https://en.wikipedia.org/wiki/Chmod) [meer wiki](https://en.wikipedia.org/wiki/File-system_permissions#Traditional_Unix_permissions)  
 [chgrp-veranderen van group owner](https://www.atlantic.net/dedicated-server-hosting/how-to-use-chgrp-change-group-ownership-command-in-linux/)
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+
 
 ### Resultaat
 eerste analyse, aanmaken, permission change, readpoging  

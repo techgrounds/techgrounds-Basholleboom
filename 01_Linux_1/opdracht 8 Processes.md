@@ -2,7 +2,11 @@
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Process categorieën: Daemons, Services, and Programs  
+Daemon - background, non-interactive  
+Service - responds to requests from programs, interactive  
+Programs - run and used by users  
+telnet - unencrypted connection service, only used in this excercise, otherwise unsafe.
 
 ## Opdracht
 ### Gebruikte bronnen

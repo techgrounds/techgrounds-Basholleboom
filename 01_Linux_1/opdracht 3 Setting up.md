@@ -8,7 +8,8 @@ Key File
 ## Opdracht
 ### Gebruikte bronnen
 [installatie check SSH](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell)  
-[uitleg commands](https://www.clickittech.com/aws/connect-ec2-instance-using-ssh/)
+[uitleg commands](https://www.clickittech.com/aws/connect-ec2-instance-using-ssh/)  
+[ubuntu user management](https://ubuntu.com/server/docs/security-users)  
 
 ### Ervaren problemen
 Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestudent dat aankaartte.

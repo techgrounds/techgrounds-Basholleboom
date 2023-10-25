@@ -21,3 +21,6 @@ met sudo adduser <naam> nieuwe user toegevoegd, vroeg automatisch om aanmaak pas
 Nu kijken naar admin groep gedeelte  
 groep aangemaakt, user aan groep toegevoegd.  
 ![group](01_Linux_1\images\admin group.PNG)  
+locating files that store user data  
+binnen /etc/ lijkt user data te staan. met grep <username> /etc/passwd krijg ik dit als output  
+![passwd grep](\01_Linux_1\images\grep originele naam pwd.PNG)

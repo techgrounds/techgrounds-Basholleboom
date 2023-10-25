@@ -7,7 +7,7 @@ sudo - geeft iemand tijdelijk root
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+sudo uitleg binnen cmd ![sudo uitleg binnen cmd](01_Linux_1\opdracht 6 Users & Groups.md)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

@@ -14,7 +14,9 @@ Key File
 Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestudent dat aankaartte.
 
 ### Resultaat
-Connection established. In command prompt eerst met cd directory veranderen naar waar ssh key is, dan met ssh -i <key file naam> <inlognaam@serverip -p<poort>> inloggen
+Connection established. In command prompt eerst met cd directory veranderen naar waar ssh key is, dan met  
+    ssh -i <key file naam> <inlognaam@serverip -p<poort>>
+inloggen
 
 ![eerste connectie](/01_Linux_1/images/setup1.png)   
 ![tweede connectie na verplaatsting key](/01_Linux_1/images/setup2.png)

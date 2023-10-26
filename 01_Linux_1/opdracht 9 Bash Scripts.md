@@ -24,3 +24,6 @@ moet het appenden naar een specifiek text file doen
 hermaakte appenderino.sh met <touch appenderino.sh>, vervolgde met <echo "a line of text>>../bas/techgrounds/text2.txt">>appenderino.sh>  
 nu appenderino executable maken voor mezelf  
 ![gedaan](images/9-chmod-herinnering.PNG)  
+met ./<.sh file> kan je executen  
+herkende locatie niet  
+![fail](images/9-run-1-fail.PNG)  

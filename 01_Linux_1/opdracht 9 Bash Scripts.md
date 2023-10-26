@@ -14,6 +14,7 @@ append -
 [rng codes](https://blog.eduonix.com/shell-scripting/generating-random-numbers-in-linux-shell-scripting/)  
 [rng codes 2](https://www.geeksforgeeks.org/random-shell-variable-in-linux-with-examples/)  
 [rng codes 3](https://www.baeldung.com/linux/random-numbers)
+[variable name notes](https://www.tutorialspoint.com/unix/unix-using-variables.htm)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

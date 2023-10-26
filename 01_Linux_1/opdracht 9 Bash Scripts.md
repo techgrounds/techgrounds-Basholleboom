@@ -43,3 +43,12 @@ apache2 enable
 succes met invullen eerste stappen in script, alleen status nog
 
 ![progress](images/9-succesful-cmd-first-steps.PNG)  
+
+volle code wat ik in h.sh plakte  
+    echo "sudo apt install apache2
+sudo apt update
+sudo apt upgrade
+sudo systemctl enable apache2
+sudo systemctl status apache2">>h.sh  
+resultaat  
+![klaar](images/9-apache2-full.PNG)  

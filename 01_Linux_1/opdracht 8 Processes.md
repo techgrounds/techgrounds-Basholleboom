@@ -17,7 +17,8 @@ telnet - unencrypted connection service, only used in this excercise, otherwise 
 [eerste bron poging memory vinden](https://phoenixnap.com/kb/linux-commands-check-memory-usage)  
 [uitleg colommen top command](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)
 [filteren in top](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-how-to-kill-a-process-from-the-command-line)  
-[force killen me t-9](https://phoenixnap.com/kb/how-to-kill-a-process-in-linux)
+[force killen me t-9](https://phoenixnap.com/kb/how-to-kill-a-process-in-linux)  
+[htop informatie](https://codeahoy.com/2017/01/20/hhtop-explained-visually/)
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 

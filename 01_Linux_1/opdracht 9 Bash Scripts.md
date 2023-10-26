@@ -3,7 +3,8 @@ Maken van scripts map en oefenen met Bash scripts
 
 ## Key-terms
 Bash script - series of commands written in text file  
-PATH variable - iets waaraan je je scriptmap toevoegt zodat linux het kan vinden
+PATH variable - iets waaraan je je scriptmap toevoegt zodat linux het kan vinden  
+append - 
 
 ## Opdracht
 ### Gebruikte bronnen
@@ -16,4 +17,9 @@ PATH variable - iets waaraan je je scriptmap toevoegt zodat linux het kan vinden
 Met echo $PATH laat hij de geconfigureerde directories zien  
     export PATH="/home/bas/scripts:$PATH">>.bashrc  
 hiermee locatie toegevoegd; NOOT: deed dit per ongeluk 2x in de .bash ipv .bashrc  
-![echo voor/na + toevoeging map](images/9-echo-addpath-echo.PNG)
+![echo voor/na + toevoeging map](images/9-echo-addpath-echo.PNG)  
+"Create a script that appends a line of text to a text file whenever it is executed" append is dus achter aan toevoegen, dus gewoon ">>" gebruiken  
+met <echo >appenderino.sh> eerste bash aangemaakt, met <echo ">>a line of text">appenderino.sh> het command voor het toevoegen van "a line of text" toegevoegd
+moet het appenden naar een specifiek text file doen  
+hermaakte appenderino.sh met <touch appenderino.sh>, vervolgde met <echo "a line of text>>../bas/techgrounds/text2.txt">>appenderino.sh>  
+nu appenderino executable maken voor mezelf

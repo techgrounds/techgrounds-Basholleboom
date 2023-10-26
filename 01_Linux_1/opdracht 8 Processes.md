@@ -34,4 +34,5 @@ htop memory list
 top met filter  
 ![filtered](/01_Linux_1/images/8-top-filter.PNG)  
 force kill met -9  
-![kill](/01_Linux_1/images/8-kill.PNG)
+![kill](/01_Linux_1/images/8-kill.PNG)  
+kill kan ook door in top 'k' in te drukken, de PID te typen, en na nog een enter '9' te typen

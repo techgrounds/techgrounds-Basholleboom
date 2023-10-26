@@ -22,4 +22,5 @@ hiermee locatie toegevoegd; NOOT: deed dit per ongeluk 2x in de .bash ipv .bashr
 met <echo >appenderino.sh> eerste bash aangemaakt, met <echo ">>a line of text">appenderino.sh> het command voor het toevoegen van "a line of text" toegevoegd
 moet het appenden naar een specifiek text file doen  
 hermaakte appenderino.sh met <touch appenderino.sh>, vervolgde met <echo "a line of text>>../bas/techgrounds/text2.txt">>appenderino.sh>  
-nu appenderino executable maken voor mezelf
+nu appenderino executable maken voor mezelf  
+(![gedaan](images/9-chmod-herinnering.PNG))

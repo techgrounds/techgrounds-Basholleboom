@@ -10,7 +10,10 @@ append -
 ### Gebruikte bronnen
 [add a directory to PATH](https://phoenixnap.com/kb/linux-add-to-path)  
 [running .sh file](https://www.cyberciti.biz/faq/run-execute-sh-shell-script/)  
-[ubuntu package management](https://ubuntu.com/server/docs/package-management)
+[ubuntu package management](https://ubuntu.com/server/docs/package-management)  
+[rng codes](https://blog.eduonix.com/shell-scripting/generating-random-numbers-in-linux-shell-scripting/)  
+[rng codes 2](https://www.geeksforgeeks.org/random-shell-variable-in-linux-with-examples/)  
+[rng codes 3](https://www.baeldung.com/linux/random-numbers)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -52,3 +55,10 @@ sudo systemctl enable apache2
 sudo systemctl status apache2">>h.sh  
 resultaat  
 ![klaar](images/9-apache2-full.PNG)  
+
+#### exercise 2 random number generator
+[rng](https://blog.eduonix.com/shell-scripting/generating-random-numbers-in-linux-shell-scripting/)  
+random number generator within 'Y' R=$(($RANDOM%Y)), voor 0-10 echo $(($RANDOM%11))  
+![code for upper and lower limit](images/9-upper-lower-limit.PNG)  
+    echo $random RANGE=$((10-1+1)) R=$(($(($RANDOM%$RANGE))+1))  
+lijkt te werken

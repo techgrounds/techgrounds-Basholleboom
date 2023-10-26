@@ -9,6 +9,7 @@ append -
 ## Opdracht
 ### Gebruikte bronnen
 [add a directory to PATH](https://phoenixnap.com/kb/linux-add-to-path)  
+[running .sh file](https://www.cyberciti.biz/faq/run-execute-sh-shell-script/)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -29,3 +30,7 @@ herkende locatie niet
 ![fail](images/9-run-1-fail.PNG)  
 juiste command was <echo "echo a line of text>>../techgrounds/text2.txt">>append.sh>  
 ![success](images/9-append-succes.PNG)  
+  
+Next: Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.: 
+
+Created h.sh for this purpose  

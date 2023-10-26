@@ -13,7 +13,7 @@ append -
 [ubuntu package management](https://ubuntu.com/server/docs/package-management)  
 [rng codes](https://blog.eduonix.com/shell-scripting/generating-random-numbers-in-linux-shell-scripting/)  
 [rng codes 2](https://www.geeksforgeeks.org/random-shell-variable-in-linux-with-examples/)  
-[rng codes 3](https://www.baeldung.com/linux/random-numbers)
+[rng codes 3](https://www.baeldung.com/linux/random-numbers)  
 [variable name notes](https://www.tutorialspoint.com/unix/unix-using-variables.htm)
 
 ### Ervaren problemen

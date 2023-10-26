@@ -8,7 +8,7 @@ sudo - geeft iemand tijdelijk root
 ## Opdracht
 ### Gebruikte bronnen
 sudo uitleg binnen cmd  
-![sudo uitleg binnen cmd](01_Linux_1\opdracht 6 Users & Groups.md)  
+![sudo uitleg binnen cmd](/01_Linux_1/images/6-sudo-user-note-cmd.PNG)  
 [add users and give them password](https://support.stackpath.com/hc/en-us/articles/360025308732-Add-Users-to-a-Virtual-Machine)  
 [cheatsheet linux commands](https://phoenixnap.com/kb/linux-commands-cheat-sheet#users-and-groups)  
 [shadow file informatie over password](https://linuxize.com/post/etc-shadow-file/)

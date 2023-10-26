@@ -9,7 +9,8 @@ append -
 ## Opdracht
 ### Gebruikte bronnen
 [add a directory to PATH](https://phoenixnap.com/kb/linux-add-to-path)  
-[running .sh file](https://www.cyberciti.biz/faq/run-execute-sh-shell-script/)
+[running .sh file](https://www.cyberciti.biz/faq/run-execute-sh-shell-script/)  
+[ubuntu package management](https://ubuntu.com/server/docs/package-management)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -34,3 +35,11 @@ juiste command was <echo "echo a line of text>>../techgrounds/text2.txt">>append
 Next: Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.: 
 
 Created h.sh for this purpose  
+begrijp dat httpd an sich niet bestaat, maar alleen subversies, teamgenoot gebruikte apache2  
+moet vermoedelijk met get?  
+[sudo apache2 update/grade commands](https://synaptica.info/en/2023/03/23/ubuntu-lts-update-apache2-to-the-lastest-version-via-ssh/)  
+apache2 enable  
+![enable command](images/9-apache2-enable.PNG)  
+succes met invullen eerste stappen in script, alleen status nog
+
+![progress](images/9-succesful-cmd-first-steps.PNG)  

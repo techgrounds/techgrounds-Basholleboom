@@ -1,15 +1,19 @@
 # Bash Scripts
-[Geef een korte beschrijving van het onderwerp]
+Maken van scripts map en oefenen met Bash scripts
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Bash script - series of commands written in text file  
+PATH variable - iets waaraan je je scriptmap toevoegt zodat linux het kan vinden
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[add a directory to PATH](https://phoenixnap.com/kb/linux-add-to-path)  
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Met echo $PATH laat hij de geconfigureerde directories zien  
+    export PATH="/home/bas/scripts:$PATH">>.bashrc
+hiermee locatie toegevoegd; NOOT: deed dit per ongeluk 2x in de .bash ipv .bashrc  
+![echo voor/na + toevoeging map](images/9-echo-addpath-echo.PNG)

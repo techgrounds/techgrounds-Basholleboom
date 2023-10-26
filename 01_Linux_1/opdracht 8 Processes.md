@@ -16,7 +16,8 @@ telnet - unencrypted connection service, only used in this excercise, otherwise 
 [get pid of a just-startet process](https://www.baeldung.com/linux/just-started-process-pid)  
 [eerste bron poging memory vinden](https://phoenixnap.com/kb/linux-commands-check-memory-usage)  
 [uitleg colommen top command](https://www.howtogeek.com/668986/how-to-use-the-linux-top-command-and-understand-its-output/)
-
+[filteren in top](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-how-to-kill-a-process-from-the-command-line)  
+[force killen me t-9](https://phoenixnap.com/kb/how-to-kill-a-process-in-linux)
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
@@ -30,3 +31,7 @@ top memory list
 ![top](/01_Linux_1/images/8-top-memory.PNG)  
 htop memory list  
 ![htop](/01_Linux_1/images/8-htop-memory.PNG)  
+top met filter  
+![filtered](/01_Linux_1/images/8-top-filter.PNG)  
+force kill met -9  
+![kill](/01_Linux_1/images/8-kill.PNG)

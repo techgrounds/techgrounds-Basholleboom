@@ -14,6 +14,6 @@ PATH variable - iets waaraan je je scriptmap toevoegt zodat linux het kan vinden
 
 ### Resultaat
 Met echo $PATH laat hij de geconfigureerde directories zien  
-    export PATH="/home/bas/scripts:$PATH">>.bashrc
+    export PATH="/home/bas/scripts:$PATH">>.bashrc  
 hiermee locatie toegevoegd; NOOT: deed dit per ongeluk 2x in de .bash ipv .bashrc  
 ![echo voor/na + toevoeging map](images/9-echo-addpath-echo.PNG)

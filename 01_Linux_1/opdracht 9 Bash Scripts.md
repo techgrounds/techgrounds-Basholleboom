@@ -27,3 +27,5 @@ nu appenderino executable maken voor mezelf
 met ./<.sh file> kan je executen  
 herkende locatie niet  
 ![fail](images/9-run-1-fail.PNG)  
+juiste command was <echo "echo a line of text>>../techgrounds/text2.txt">>append.sh>  
+![success](images/9-append-succes.PNG)  

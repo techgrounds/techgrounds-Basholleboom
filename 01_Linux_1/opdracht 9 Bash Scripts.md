@@ -64,7 +64,7 @@ random number generator within 'Y' R=$(($RANDOM%Y)), voor 0-10 echo $(($RANDOM%1
 ![code for upper and lower limit](images/9-upper-lower-limit.PNG)  
     echo $random RANGE=$((10-1+1)) R=$(($(($RANDOM%$RANGE))+1))  
 lijkt te werken  
-werkende code: 
+werkende code:  
     DIFF=$((10-1+1))
     VAR_1=$(($(($RANDOM%$DIFF))+1))
     echo -e $VAR_1>../techgrounds/rng.txt  

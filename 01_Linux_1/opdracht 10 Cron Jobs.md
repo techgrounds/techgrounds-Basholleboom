@@ -9,7 +9,7 @@ Making tasks run on a schedule
 [date in script info](https://www.cyberciti.biz/faq/unix-linux-getting-current-date-in-bash-ksh-shell-script/)  
 [chrontab.guru](https://crontab.guru/)
 [chrontab info](https://phoenixnap.com/kb/set-up-cron-job-linux)  
-
+medestudent comment: sudo timedatectl >> currenttime.txt Als je dit in .sh script plaats dan werkt het
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 

@@ -65,13 +65,13 @@ random number generator within 'Y' R=$(($RANDOM%Y)), voor 0-10 echo $(($RANDOM%1
     echo $random RANGE=$((10-1+1)) R=$(($(($RANDOM%$RANGE))+1))  
 lijkt te werken  
 werkende code:  
-    DIFF=$((10-1+1))
-    VAR_1=$(($(($RANDOM%$DIFF))+1))
+    DIFF=$((10-1+1))  
+    VAR_1=$(($(($RANDOM%$DIFF))+1))  
     echo -e $VAR_1>../techgrounds/rng.txt  
 
 #### exercise 3
 poging 1  
-    DIFF=$((10-1+1))
-    VAR_1=$(($(($RANDOM%$DIFF))+1))
-    if VAR_1>5 echo -e $VAR_1>../techgrounds/rng3.txt
+    DIFF=$((10-1+1))  
+    VAR_1=$(($(($RANDOM%$DIFF))+1))  
+    if VAR_1>5 echo -e $VAR_1>../techgrounds/rng3.txt  
     elif VAR_1>5 echo the number is 5 or smaller>../techgrounds/rng3.txt  

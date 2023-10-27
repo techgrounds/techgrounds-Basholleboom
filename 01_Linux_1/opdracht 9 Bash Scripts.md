@@ -15,6 +15,7 @@ append -
 [rng codes 2](https://www.geeksforgeeks.org/random-shell-variable-in-linux-with-examples/)  
 [rng codes 3](https://www.baeldung.com/linux/random-numbers)  
 [variable name notes](https://www.tutorialspoint.com/unix/unix-using-variables.htm)
+[conditional expression](https://www.thegeekstuff.com/2010/06/bash-conditional-expression/)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -75,3 +76,6 @@ poging 1
     VAR_1=$(($(($RANDOM%$DIFF))+1))  
     if VAR_1>5 echo -e $VAR_1>../techgrounds/rng3.txt  
     elif VAR_1>5 echo the number is 5 or smaller>../techgrounds/rng3.txt  
+
+succes  
+![succes](images/9-lessthansucces.PNG)  

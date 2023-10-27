@@ -11,7 +11,8 @@ Making tasks run on a schedule
 [chrontab info](https://phoenixnap.com/kb/set-up-cron-job-linux)  
 medestudent comment: sudo timedatectl >> currenttime.txt Als je dit in .sh script plaats dan werkt het
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
+[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]  
+[available disk space info](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-how-to-check-disk-space-on-linux-from-the-command-line)
 
 ### Resultaat
     now=$(date)
@@ -24,4 +25,21 @@ dat.sh
     echo "$now">>/home/dats.txt  
 
     crontab -e
-dit opent chronjob bestand, heb ingesteld op nano als editor
+dit opent chronjob bestand, heb ingesteld op nano als editor  
+gebruikte command binnen crontab  
+![command](images/10-crontab-1.PNG)  
+![success](images/10-timelysuccess.PNG)  
+
+#### sub-exercise 3
+    df -H  
+dit lijkt de command te zijn, naam script: diskspacecheck.sh  
+werkt, nu naar /var/logs  
+deze directory lijkt niet te bestaan, aanmaken in bas, had steeds sudo nodig
+uiteindelijk gecreërde log document: ~/var/logs/diskspacelog.txt  
+gebruikte kode diskspacecheck.sh  
+    now=$(date)  
+    echo "$now">>/var/logs/diskspacelog.txt  
+    df -H>>/var/logs/diskspacelog.txt  
+hiermee laat hij de datum boven iedere log zien, wel zo makkelijk  
+heb de command "@weekly" gebruikt binnen crontab, lijkt te werken, zal hem zondag middernacht moeten doen  
+maandag controleren of dit idd werkte

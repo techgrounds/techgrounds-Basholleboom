@@ -35,6 +35,7 @@ herkende locatie niet
 ![fail](images/9-run-1-fail.PNG)  
 juiste command was <echo "echo a line of text>>../techgrounds/text2.txt">>append.sh>  
 ![success](images/9-append-succes.PNG)  
+![variable assignment](https://www.tecmint.com/assign-linux-command-output-to-variable/)
   
 Next: Create a script that installs the httpd package, activates httpd, and enables httpd. Finally, your script should print the status of httpd in the terminal.: 
 
@@ -62,4 +63,15 @@ resultaat
 random number generator within 'Y' R=$(($RANDOM%Y)), voor 0-10 echo $(($RANDOM%11))  
 ![code for upper and lower limit](images/9-upper-lower-limit.PNG)  
     echo $random RANGE=$((10-1+1)) R=$(($(($RANDOM%$RANGE))+1))  
-lijkt te werken
+lijkt te werken  
+werkende code: 
+    DIFF=$((10-1+1))
+    VAR_1=$(($(($RANDOM%$DIFF))+1))
+    echo -e $VAR_1>../techgrounds/rng.txt  
+
+####exercise 3
+poging 1  
+    DIFF=$((10-1+1))
+    VAR_1=$(($(($RANDOM%$DIFF))+1))
+    if VAR_1>5 echo -e $VAR_1>../techgrounds/rng3.txt
+    elif VAR_1>5 echo the number is 5 or smaller>../techgrounds/rng3.txt  

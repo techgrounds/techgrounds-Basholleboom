@@ -69,7 +69,7 @@ werkende code:
     VAR_1=$(($(($RANDOM%$DIFF))+1))
     echo -e $VAR_1>../techgrounds/rng.txt  
 
-####exercise 3
+#### exercise 3
 poging 1  
     DIFF=$((10-1+1))
     VAR_1=$(($(($RANDOM%$DIFF))+1))

@@ -12,7 +12,7 @@ Statische en dynamische adressen - namen spreken voor zich, statisch is zelden n
 ### Gebruikte bronnen
 [public vs private ips](https://www.scaler.com/topics/computer-network/public-and-private-ip-address/)  
 [statische en dynamische adressen](https://support.google.com/fiber/answer/3547208?hl=en)  
-[publik ip finder](https://whatismyipaddress.com/)
+
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
@@ -23,6 +23,7 @@ PC: 77.161.47.219
 Telefoon: 77.161.47.219  
 deze zijn hetzelfde omdat het om dezelfde router gaat  
 
-Privé IP adres:
-PC: 
-Telefoon:
+Privé IP adres:  
+PC: 192.168.2.10  
+Telefoon: 192.168.2.8  
+deze zijn anders omdat ze door de router aan de aparatuur zijn toegewezen  

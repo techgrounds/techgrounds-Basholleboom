@@ -25,7 +25,7 @@ dat.sh
     echo "$now">>/home/dats.txt  
 
     crontab -e
-dit opent chronjob bestand, heb ingesteld op nano als editor  
+dit opent cronjob bestand, heb ingesteld op nano als editor  
 gebruikte command binnen crontab  
 ![command](images/10-crontab-1.PNG)  
 ![success](images/10-timelysuccess.PNG)  
@@ -42,4 +42,5 @@ gebruikte kode diskspacecheck.sh
     df -H>>/var/logs/diskspacelog.txt  
 hiermee laat hij de datum boven iedere log zien, wel zo makkelijk  
 heb de command "@weekly" gebruikt binnen crontab, lijkt te werken, zal hem zondag middernacht moeten doen  
-maandag controleren of dit idd werkte
+maandag controleren of dit idd werkte  
+Controle maandag: Het werkte; de log is gemaakt op Sun Oct 29 00:00:02 UTC 2023

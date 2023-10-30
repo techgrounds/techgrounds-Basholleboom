@@ -18,8 +18,8 @@ Ik wist niet dat ik de poort moest toevoegen achter het IP-adres tot een medestu
 Connection established. In command prompt eerst met cd directory veranderen naar waar ssh key is, dan met  
     ssh -i <key file naam> <inlognaam@serverip -p<poort>>  
     eg  
-    cd C:\Users\basho\.ssh  
-    ssh -i Nest-ba-holleboom.pem bas@3.121.40.175 -p52214  
+     cd C:\Users\basho\.ssh  
+    ssh -i Nest-ba-holleboom.pem bas@3.121.40.175 -p52214 
 inloggen
 
 ![eerste connectie](/01_Linux_1/images/setup1.png)   

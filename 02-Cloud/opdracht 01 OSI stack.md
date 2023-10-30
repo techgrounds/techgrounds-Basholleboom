@@ -10,6 +10,7 @@ bottom-up en top-down approach - troubleshooting gaat vaak de lagen door van laa
 ### Gebruikte bronnen
 [youtube what is TCP/IP and OSI](https://www.youtube.com/watch?v=CRdL1PcherM)  
 [wiki link TCP/IP](https://en.wikipedia.org/wiki/Internet_protocol_suite)  
+[wiki link OSI model](https://en.wikipedia.org/wiki/OSI_model)  
 [OSI uitleg](https://www.imperva.com/learn/application-security/osi-model/)
 
 ### Ervaren problemen

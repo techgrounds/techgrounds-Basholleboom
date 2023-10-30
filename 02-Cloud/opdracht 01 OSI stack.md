@@ -1,4 +1,4 @@
-# Introduction
+# OSI Stack
 Introduction of OSI model and TCP/IP model
 
 ## Key-terms

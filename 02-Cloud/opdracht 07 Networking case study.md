@@ -1,4 +1,4 @@
-# [Onderwerp]
+# Networking case study
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms

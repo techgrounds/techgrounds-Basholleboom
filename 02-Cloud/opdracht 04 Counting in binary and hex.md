@@ -1,4 +1,4 @@
-# [Onderwerp]
+# Counting in binary and hex
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms

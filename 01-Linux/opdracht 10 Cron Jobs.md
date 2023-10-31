@@ -36,7 +36,7 @@ dit lijkt de command te zijn, naam script: diskspacecheck.sh
 werkt, nu naar /var/logs  
 deze directory lijkt niet te bestaan, aanmaken in bas, had steeds sudo nodig
 uiteindelijk gecreërde log document: ~/var/logs/diskspacelog.txt  
-gebruikte kode diskspacecheck.sh  
+gebruikte code diskspacecheck.sh  
     now=$(date)  
     echo "$now">>/var/logs/diskspacelog.txt  
     df -H>>/var/logs/diskspacelog.txt  

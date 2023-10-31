@@ -2,11 +2,14 @@
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+LAN - Local Area Network  
+subnet - kleiner netwerk dat onderdeel is van een groter netwerk  
+CIDR notation - Classless Inter Domain Routing, method for allocating IP adresses and for IP routing - wikipedia
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[diagram maker](https://app.diagrams.net/)
+[subnet calculator](https://www.calculator.net/ip-subnet-calculator.html)  
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

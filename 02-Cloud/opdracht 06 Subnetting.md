@@ -44,3 +44,6 @@ Dit gaat dan worden:
 10.0.0.0/24  
 LAN subnet - Router subnet - Network Gateway subnet  
 10.0.0.1/28 - 10.0.0.2/26 - 10.0.0.3/29
+
+Diagram
+![Diagram](Images/06-diagram-explain.png)

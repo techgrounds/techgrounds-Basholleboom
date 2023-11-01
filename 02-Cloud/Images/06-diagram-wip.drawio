@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T13:35:21.231Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="k0SboL4ar7ia1s-DkpHO" version="22.0.8" type="device">
+  <diagram name="Pagina-1" id="DlZvTtvGYwiaSzzIgSMs">
+    <mxGraphModel dx="1194" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-40" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="160" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="160" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="480" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-6" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="230" as="sourcePoint" />
+            <mxPoint x="200" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-11" value="&lt;div&gt;10.0.0.0/24&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-17" value="LAN subnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="150" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-21" value="Router subnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="150" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-23" value="Network gateway subnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="150" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="160" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-28" value="&lt;div&gt;10.0.0.0/28&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-29" value="&lt;div&gt;10.0.0.0/26&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-30" value="&lt;div&gt;10.0.0.0/29&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-31" value="Network Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-33" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="210" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-34" value="Minimaal 15 hosts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="210" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-35" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="210" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-36" value="Minimaal 30 hosts + router" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="210" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-37" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="210" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-38" value="Minimaal 5 hosts + gateway" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="210" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

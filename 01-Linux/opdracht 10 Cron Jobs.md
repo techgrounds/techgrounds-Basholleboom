@@ -43,4 +43,6 @@ gebruikte code diskspacecheck.sh
 hiermee laat hij de datum boven iedere log zien, wel zo makkelijk  
 heb de command "@weekly" gebruikt binnen crontab, lijkt te werken, zal hem zondag middernacht moeten doen  
 maandag controleren of dit idd werkte  
-Controle maandag: Het werkte; de log is gemaakt op Sun Oct 29 00:00:02 UTC 2023
+Controle maandag: Het werkte; de log is gemaakt op Sun Oct 29 00:00:02 UTC 2023  
+Note van Allard / --output=avail achter df selecteerd de output op alleen de totale schijfruimte  
+[Bron van Allard](https://stackoverflow.com/questions/28809148/how-to-select-a-particular-column-in-linux-df-command)

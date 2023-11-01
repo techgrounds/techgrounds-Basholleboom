@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2023-11-01T13:50:46.978Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="wL7ua4sK14zIge3sR7ir" version="22.0.8" type="device">
+  <diagram name="Pagina-1" id="DlZvTtvGYwiaSzzIgSMs">
+    <mxGraphModel dx="1194" dy="752" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-25" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="160" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-40" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="160" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-41" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="160" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-6" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="261" as="sourcePoint" />
+            <mxPoint x="200" y="261" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-11" value="&lt;div&gt;10.0.0.0/24&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="130" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-17" value="LAN subnet" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-21" value="Router subnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="280" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-23" value="Network gateway subnet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-29" value="&lt;div&gt;10.0.0.0/27&lt;/div&gt;" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="180" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-28" value="&lt;div&gt;10.0.0.0/28&lt;/div&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-31" value="Network Architecture" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="90" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-34" value="Minimaal 15 hosts" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="121" y="247" width="158" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-36" value="Minimaal 30 hosts + router" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="279" y="247" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-38" value="Minimaal 5 hosts + gateway" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="439" y="247" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-30" value="&lt;div&gt;10.0.0.0/29&lt;/div&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="180" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-46" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="201" y="328" as="sourcePoint" />
+            <mxPoint x="201" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-47" value="/28 omdat hiermee je total number of hosts op 16 staat" style="text;html=1;strokeColor=none;fillColor=#dae8fc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="122" y="300" width="158" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-48" value="&lt;div&gt;/27 omdat hiermee het number of usable hosts 30 is, de router neemt zelf ook host in beslag&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="314" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sjbm00iA3tMHE1k8XqFr-49" value="/29 omdat hiermee het number of usable hosts 6 is, de gateway neemt zelf ook hosts in beslag" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="314" width="160" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

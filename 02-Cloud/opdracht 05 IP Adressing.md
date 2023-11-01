@@ -27,3 +27,10 @@ Privé IP adres:
 PC: 192.168.2.10  
 Telefoon: 192.168.2.8  
 deze zijn anders omdat ze door de router aan de aparatuur zijn toegewezen  
+
+automatische IP Telefoon:  
+192.168.2.8  
+255.255.255.0  
+192.168.2.254  
+
+Op mijn telefoon lukte het niet; op mijn pc wel, als ik op hetzelfde ip ga als mijn telefoon lukt het maar is de verbinding wat instabieler. Als ik het privé adres verander heb ik geen internet.

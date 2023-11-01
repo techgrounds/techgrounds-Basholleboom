@@ -42,5 +42,5 @@ voor punt 3 lijkt een network gateway ook normaal gesproken NAT functionaliteit 
 
 Dit gaat dan worden:  
 10.0.0.0/24  
-LAN subnet          Router subnet           Network Gateway subnet  
-10.0.0.1/28         10.0.0.2/26             10.0.0.3/29
+LAN subnet - Router subnet - Network Gateway subnet  
+10.0.0.1/28 - 10.0.0.2/26 - 10.0.0.3/29

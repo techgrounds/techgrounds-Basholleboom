@@ -12,4 +12,14 @@
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Needed:  
+    A web server where our webshop is hosted
+    A database with login credentials for users on the webshop
+    5 workstations for the office workers
+    A printer
+    An AD server
+    A file server containing internal documents  
+
+Network security is important  
+AD server seems to be advertising server  
+10 connecties zonder route; gebruik /28 voor 14 usable hosts  

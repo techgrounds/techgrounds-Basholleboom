@@ -19,7 +19,7 @@ Connection established. In command prompt eerst met cd directory veranderen naar
     ssh -i <key file naam> <inlognaam@serverip -p<poort>>  
     eg  
      cd C:\Users\basho\.ssh  
-    ssh -i Nest-ba-holleboom.pem bas@3.121.40.175 -p52214 
+    ssh -i Nest-ba-holleboom.pem bas@3.121.40.175 -p52214  
 inloggen
 
 ![eerste connectie](/01_Linux_1/images/setup1.png)   

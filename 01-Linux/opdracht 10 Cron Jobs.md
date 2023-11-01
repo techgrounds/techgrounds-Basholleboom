@@ -34,7 +34,7 @@ gebruikte command binnen crontab
     df -H  
 dit lijkt de command te zijn, naam script: diskspacecheck.sh  
 werkt, nu naar /var/logs  
-deze directory lijkt niet te bestaan, aanmaken in bas, had steeds sudo nodig
+deze directory lijkt niet te bestaan, aanmaken in bas, had steeds sudo nodig  
 uiteindelijk gecreërde log document: ~/var/logs/diskspacelog.txt  
 gebruikte code diskspacecheck.sh  
     now=$(date)  

@@ -12,6 +12,8 @@ CIDR notation - Classless Inter-Domain Routing, method for allocating IP adresse
 [subnet calculator](https://www.calculator.net/ip-subnet-calculator.html)  
 [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)  
 [subnet](https://en.wikipedia.org/wiki/Subnet)  
+![voorbeeld](Images/06-voorbeeld-sjabloon.PNG)  
+[gateway info](https://en.wikipedia.org/wiki/Gateway_(telecommunications))  
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -33,3 +35,12 @@ Mogelijk fout
 met /24 heb je 256 adressen, met /25 128  
 26=64, 27=32, 28=16, 29=8, 30=4, 31=2, 32=1  
 zou het dan een /28 zijn voor punt 1, en een /27 voor punt 2?  
+volgens de subnet calculator geeft 28 een total number of host van 16 en usable van 14  
+zou het dan een /27 een /26 moeten zijn?  
+Dit doet me denken over de "x hosts exclusief de router" comments. Ik vermoed dat 28 dan wel goed is voor punt 1 aangezien het los van de router is, voor punt 2 is dan wel 26 nodig omdat de router wel meedoet.  
+voor punt 3 lijkt een network gateway ook normaal gesproken NAT functionaliteit te hebben?
+
+Dit gaat dan worden:  
+10.0.0.0/24  
+LAN subnet          Router subnet           Network Gateway subnet  
+10.0.0.1/28         10.0.0.2/26             10.0.0.3/29

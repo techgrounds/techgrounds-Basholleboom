@@ -2,7 +2,7 @@
 [Geef een korte beschrijving van het onderwerp]
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+DMZ - Demilitarized zone
 
 ## Opdracht
 ### Gebruikte bronnen
@@ -25,7 +25,11 @@ Needed:
 Network security is important  
 AD server seems to be advertising server  
 10 connecties zonder route; gebruik /28 voor 14 usable hosts  
-Herinnering: switches zijn voor in hetzelfde netwerk; alle interne apparatuur zit dus aan een switch. De switch zit aan de router. De switch heeft zelf geen IP adres.  
+Herinnering: switches zijn voor in hetzelfde netwerk; alle interne apparatuur zit dus aan een switch zodat ze ook met elkaar kunnen communiceren. De switch zit aan de router. De switch heeft zelf geen IP adres.  
 
 Resultaat:  
-![resultaat](Images/07-diagram-color.png)
+![resultaat](Images/07-diagram-color.png)  
+Medestudent: Database server met login credentials zit vaak in een losse set volgens het concept van een dmz - demilitarized zone:  
+![dmz](Images/07-DMZ-bron.png)  
+Heb een versie gemaakt met een losse switch set voor het web service gedeelte voor de veiligheid. Volgens mij kan ik de huidige subnets bewaren?  
+![resultaat+dmz](Images/07-diagram-dmz.png)  

@@ -6,7 +6,9 @@
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[herhaling uitleg switch](https://www.youtube.com/watch?v=9eH16Fxeb9o)  
+mooi schematisch overview inclusief firewall  
+![mooi schematisch overview inclusief firewall](Images/07-router-overview.PNG)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
@@ -23,3 +25,7 @@ Needed:
 Network security is important  
 AD server seems to be advertising server  
 10 connecties zonder route; gebruik /28 voor 14 usable hosts  
+Herinnering: switches zijn voor in hetzelfde netwerk; alle interne apparatuur zit dus aan een switch. De switch zit aan de router. De switch heeft zelf geen IP adres.  
+
+Resultaat:  
+![resultaat](Images/07-diagram-color.png)

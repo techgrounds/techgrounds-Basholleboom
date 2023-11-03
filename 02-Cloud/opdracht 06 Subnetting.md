@@ -46,4 +46,7 @@ LAN subnet - Router subnet - Network Gateway subnet
 10.0.0.1/28 - 10.0.0.2/26 - 10.0.0.3/29
 
 Diagram
-![Diagram](Images/06-diagram-explain.png)
+![Diagram](Images/06-diagram-explain.png)  
+
+Notitie van Allard: de het laatste gedeelte van het IP adres moet nog wel uniek zijn, en waarschijnlijk ook cumulatief. Eg je kan geen 10.0.0.4/27 en 10.0.0.4/28 binnen dezelfde privé ip set hebben.  
+![cumulatief](Images/06-subnetting-cumulative.PNG)

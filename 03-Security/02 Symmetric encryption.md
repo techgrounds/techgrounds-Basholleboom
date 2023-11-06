@@ -2,16 +2,23 @@
 
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Cipher - an algorithm for performing encryption or decryption  
+SHA - Secure Hash Algorithms  
+AES - Advanced Encryption Standard
 
 ## Opdracht
 ### Resultaat
 #### Exercise 1
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Historische ciphers: enigma machine, eerdere SHA-0  
+Nog steeds gebruikte ciphers: SHA-2, Advanced Encryption Standard  
 
 ### Ervaren problemen
 #### Exercise 1
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[wiki symmetric key](https://en.wikipedia.org/wiki/Symmetric-key_algorithm)  
+[secure hash algorithms](https://en.wikipedia.org/wiki/Secure_Hash_Algorithms)  
+[Advanced Encryption Standard](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)  
+[Asymmetric Encryption - Simply explained](https://www.youtube.com/watch?v=AQDCe585Lnc)  
+[ AES Explained (Advanced Encryption Standard) - Computerphile](https://www.youtube.com/watch?v=O4xNJsjtN6E)    

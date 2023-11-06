@@ -52,7 +52,7 @@ geeft "De verbinding werd geherinitialiseerd"
 verbinden met Deniz werkt wel  
 als ik mijn apache2 server stop dan krijg ik nog steeds zelfde melding  
 52214 is ssh, moet met web port  
-http://3.121.40.175:558014/  
+http://3.121.40.175:58014/  
 ![apache2 werkt](Images/10-apache2-running.PNG) 
 
 #### Stel de firewall zo in dat je webverkeer blokkeert, maar wel ssh-verkeer toelaat.
@@ -64,4 +64,6 @@ http://3.121.40.175:558014/
     sudo ufw allow ssh  
 
 #### Controleer of de firewall zijn werk doet.
+gecontroleerd met  
+    sudo ufw status verbose  
 ![succes](Images/10-firewall-on.PNG)

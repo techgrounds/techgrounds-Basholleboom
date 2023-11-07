@@ -13,8 +13,8 @@ Historische ciphers: enigma machine, Vigenère Cipher
 Nog steeds gebruikte ciphers: Blowfish, Advanced Encryption Standard  
 
 #### Exercise 3
-generated key: 3lwe35GHUuV95ngoAcmxog==
-
+generated key: 3lwe35GHUuV95ngoAcmxog==  
+heen een weer sturen lukte allemaal, iedereen die mijn key kopieërt kan natuurlijk mijn data lezen
 
 ### Ervaren problemen
 #### Exercise 1

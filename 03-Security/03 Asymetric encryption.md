@@ -7,7 +7,7 @@
 ## Opdracht
 ### Resultaat
 #### Exercise 1
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+over en weer crypten en decrypten lukte goed
 
 ### Ervaren problemen
 #### Exercise 1

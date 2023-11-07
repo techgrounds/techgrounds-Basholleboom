@@ -2,7 +2,8 @@
 
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+PKI - Public Key Infrastructure  
+X.509 - standard for PKI  
 
 ## Opdracht
 ### Resultaat

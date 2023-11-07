@@ -14,4 +14,5 @@
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[online rainbow table](https://crackstation.net/)  
+[hashing](https://www.techtarget.com/searchdatamanagement/definition/hashing#:~:text=Hashing%20is%20the%20process%20of,the%20implementation%20of%20hash%20tables.)

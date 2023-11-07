@@ -14,4 +14,7 @@
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[wiki asymmetric key](https://en.wikipedia.org/wiki/Public-key_cryptography)
+[wiki asymmetric key](https://en.wikipedia.org/wiki/Public-key_cryptography)  
+[asymmetric cryptography](https://www.youtube.com/watch?v=AQDCe585Lnc)  
+[public key crytography](https://www.youtube.com/watch?v=GSIDS_lvRv4)  
+[key generator from techgrounds](https://travistidwell.com/jsencrypt/demo/)  

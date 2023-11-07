@@ -8,7 +8,8 @@ DMZ - Demilitarized zone
 ### Gebruikte bronnen
 [herhaling uitleg switch](https://www.youtube.com/watch?v=9eH16Fxeb9o)  
 mooi schematisch overview inclusief firewall  
-![mooi schematisch overview inclusief firewall](Images/07-router-overview.PNG)
+![mooi schematisch overview inclusief firewall](Images/07-router-overview.PNG)  
+[bonus filmpje week 2](https://www.youtube.com/watch?v=oopkClg1kxM)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

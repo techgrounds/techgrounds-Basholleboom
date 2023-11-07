@@ -2,7 +2,7 @@
 
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Vanuit een sleutel kan je soms meerdere sleutels maken, 1 master key naar meerdere private, 1 private naar meerdere public, zie ook: key rotation  
 
 ## Opdracht
 ### Resultaat

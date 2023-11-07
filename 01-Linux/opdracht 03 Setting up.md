@@ -22,5 +22,5 @@ Connection established. In command prompt eerst met cd directory veranderen naar
     ssh -i Nest-ba-holleboom.pem bas@3.121.40.175 -p52214  
 inloggen
 
-![eerste connectie](/01_Linux_1/images/setup1.png)   
-![tweede connectie na verplaatsting key](/01_Linux_1/images/setup2.png)
+![eerste connectie](/01-linux/images/setup1.png)   
+![tweede connectie na verplaatsting key](/01-linux/images/setup2.png)

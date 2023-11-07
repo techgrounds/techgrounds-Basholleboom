@@ -24,16 +24,16 @@ telnet - unencrypted connection service, only used in this excercise, otherwise 
 
 ### Resultaat
 door gewoon <telnet> te typen lijk ik al in telnet te komen....  
-![startup](/01_Linux_1/images/8-telnetstartup+questionmark.PNG)  
+![startup](/01-linux/images/8-telnetstartup+questionmark.PNG)  
 telnet PID gekregen via pgrep  
-![pid](/01_Linux_1/images/8-telnet-pid.PNG)  
+![pid](/01-linux/images/8-telnet-pid.PNG)  
 gebruik top of htop command voor info  
 top memory list  
-![top](/01_Linux_1/images/8-top-memory.PNG)  
+![top](/01-linux/images/8-top-memory.PNG)  
 htop memory list  
-![htop](/01_Linux_1/images/8-htop-memory.PNG)  
+![htop](/01-linux01-linux/images/8-htop-memory.PNG)  
 top met filter  
-![filtered](/01_Linux_1/images/8-top-filter.PNG)  
+![filtered](/01-linux/images/8-top-filter.PNG)  
 force kill met -9  
-![kill](/01_Linux_1/images/8-kill.PNG)  
+![kill](/01-linux/images/8-kill.PNG)  
 kill kan ook door in top 'k' in te drukken, de PID te typen, en na nog een enter '9' te typen

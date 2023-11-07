@@ -8,9 +8,13 @@ AES - Advanced Encryption Standard
 
 ## Opdracht
 ### Resultaat
-#### Exercise 1
-Historische ciphers: enigma machine, eerdere SHA-0  
+#### Exercise 1 & 2
+Historische ciphers: enigma machine, Vigenère Cipher  
 Nog steeds gebruikte ciphers: Blowfish, Advanced Encryption Standard  
+
+#### Exercise 3
+generated key: 3lwe35GHUuV95ngoAcmxog==
+
 
 ### Ervaren problemen
 #### Exercise 1
@@ -23,4 +27,6 @@ Nog steeds gebruikte ciphers: Blowfish, Advanced Encryption Standard
 [Asymmetric Encryption - Simply explained](https://www.youtube.com/watch?v=AQDCe585Lnc)  
 [ AES Explained (Advanced Encryption Standard) - Computerphile](https://www.youtube.com/watch?v=O4xNJsjtN6E)  
 [more symmetric encryption stuff](https://www.cryptomathic.com/news-events/blog/symmetric-key-encryption-why-where-and-how-its-used-in-banking)  
-[key generator](https://generate-random.org/encryption-key-generator)
+[key generator](https://generate-random.org/encryption-key-generator)  
+[historic ciphers](https://www.secplicity.org/2017/05/25/historical-cryptography-ciphers/)  
+[encryptor en decryptor](https://www.devglan.com/online-tools/aes-encryption-decryption)  

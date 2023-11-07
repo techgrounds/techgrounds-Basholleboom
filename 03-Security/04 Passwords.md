@@ -19,12 +19,14 @@ wachtwoord: 12345
     passwordenjoyer:$6$cpww45knJsT9o0Ao$hOHpGpXtXJBsgaxuhfbXmgZ5PwWW9RH53V.D3gQ66xShHxOizuuCn7NnHz5ZLvvwZ/gHbHotj8QTNOZ8tchML1:19668:0:99999:7:::  
 begin code is $6$, dus SHA-512  
 sudo cat /etc/shadow geeft de dingen van iedereen weer, dus grep is beter  
-krijg steeds "unrecognized hash format"
+krijg steeds "unrecognized hash format"  
+resultaat Allard: $6$Qn.HX4XmpYck092S$AbZHVH/Ld5wQe2NoiQ52PklcwaTlviWLrgkr8fKuu5VgdgtbIVmcAJUGUXvAsMsGKXHFxDMSc5AzqK8mZqc5k1:19668:0:99999:7:::  
+dit is net anders, omdat de data deels anders is, oa. met salting. Voor ons beiden is het gehashed als SHA-512, alles na de dubbele punt is weer hetzelfde
 
 
 ### Ervaren problemen
 #### Exercise 1
-krijg steeds "unrecognized hash format", weet niet of dit het bedoelde resultaat is  
+krijg steeds "unrecognized hash format", weet niet of dit het bedoelde resultaat is, controleer met de anderen als ze er ook zijn  
 
 ### Gebruikte bronnen
 [online rainbow table](https://crackstation.net/)  

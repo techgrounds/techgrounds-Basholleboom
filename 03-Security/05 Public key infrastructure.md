@@ -42,9 +42,9 @@ Begin bij Techgrounds, zegt verbinding beveiligd, als ik daarop klik verteld hij
 
 Ik kan ook kiezen voor certificaat bekijken, waar een hoop informaties, publieke sleutels, en vingerafdrukken staan; zie RSA algoritme, sleutelgrootte van 2048, exponent van 65537, en een modulus. De vingerafdrukken zijn SHA-256 en SHA-1.  
 
-als ik bij de NOS kijk is de informatie bij de publieke sleutel gelijk tov techgrounds, op de modulus na. is dit mijn sleutel? Zelfde geld voor de Rabobank  
+als ik bij de NOS kijk is de informatie bij de publieke sleutel gelijk tov techgrounds, op de modulus na. is dit mijn sleutel? Zelfde geld voor de Rabobank. Bij Github is dit wel anders, daar is het algoritme voor de publieke sleutel "Elliptic Curve".  
 
-Certificaten lijken bij derden te zijn opgeslagen? Voor de NOS en Rabobank zijn dit toevallig dezelfde uitgevers.  
+Certificaten lijken bij derden te zijn opgeslagen. Voor de NOS en Rabobank zijn dit toevallig dezelfde uitgevers, Sectigo Limited en The USERTRUST Network. Er is een hierarchie van certificaten.  
 Er zijn altijd vingerafdrukken in SHA-256 en SHA-1  
 
 #### Exercise 3 Find the list of trusted certificate roots on your pc/laptop (bonus points if you also find it in your VM). 
@@ -60,9 +60,14 @@ volg replies in bron 5
 zowel  
 awk -v cmd='openssl x509 -noout -subject' '  
     /BEGIN/{close(cmd)};{print | cmd}' < /etc/ssl/certs/ca-certificates.crt  
-    en  
-    een ls in /etc/ssl/certs  
-geven een hoop data
+en  
+een ls in /etc/ssl/certs  
+geven een hoop data  
+AWK  
+![awk](Images/05-awk-partial-snip.PNG)  
+Certs  
+![certs](Images/05-ls-certs-partial.PNG)
+
 
 ### Ervaren problemen
 #### Exercise 1
@@ -74,4 +79,6 @@ geven een hoop data
 [info ssl certificate](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/)  
 [root certificate](https://en.wikipedia.org/wiki/Root_certificate)  
 [way to find my root certificates](https://learn.microsoft.com/en-us/skype-sdk/sdn/articles/installing-the-trusted-root-certificate)  
-[list al available ssla ca certificates](https://unix.stackexchange.com/questions/97244/list-all-available-ssl-ca-certificates)
+[list al available ssla ca certificates](https://unix.stackexchange.com/questions/97244/list-all-available-ssl-ca-certificates)  
+[Certificates from scratch](https://www.youtube.com/watch?v=kAaIYRJoJkc)  
+[public key infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) 

@@ -10,6 +10,13 @@ RTO - recovery time objective
 
 ## Opdracht
 ### Resultaat
+Study:  
+    IDS and IPS.  
+    Hack response strategies.  
+    The concept of systems hardening.  
+    Different types of disaster recovery options.  
+
+
 #### Exercise 1 A Company makes daily backups of their database. The database is automatically recovered when a failure happens using the most recent available backup. The recovery happens on a different physical machine than the original database, and the entire process takes about 15 minutes. What is the RPO of the database?
 RPO=recovery point objective; amount data lost. Verlies is alles nadat de laatste daily backup is gemaakt. 
 
@@ -21,4 +28,6 @@ RTO is tijd nodig tot alles weer online is, hier is dat 8 minuten
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[ids vs ips](https://www.spiceworks.com/it-security/network-security/articles/ids-vs-ips/)  
+[ids vs ips 2](https://www.varonis.com/blog/ids-vs-ips)  
+[ids/ips wiki](https://en.wikipedia.org/wiki/Intrusion_detection_system)  

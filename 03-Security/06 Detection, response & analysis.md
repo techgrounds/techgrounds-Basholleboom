@@ -7,6 +7,9 @@ IDS - intrusion detection systems
 IPS - intrusion protection systems  
 RPO - recovery point objective  
 RTO - recovery time objective  
+Synchronous replication - constante backups voor lage rto en rpo, backup server moet wel fysiek in de buurt zijn  
+Asynchronous replication - backup eens in de zoveel tijd op een server ver weg; goed voor extreme situaties als natuurrampen  
+Mixed technique - synchronous en asynchronous replication tegelijk
 
 ## Opdracht
 ### Resultaat
@@ -31,3 +34,6 @@ RTO is tijd nodig tot alles weer online is, hier is dat 8 minuten
 [ids vs ips](https://www.spiceworks.com/it-security/network-security/articles/ids-vs-ips/)  
 [ids vs ips 2](https://www.varonis.com/blog/ids-vs-ips)  
 [ids/ips wiki](https://en.wikipedia.org/wiki/Intrusion_detection_system)  
+[ids and ips](https://www.youtube.com/watch?v=cMH4yGE73iQ)  
+[7 Steps to Building a Disaster Recovery Plan](https://www.youtube.com/watch?v=Ipf3nXsgC3M)  
+[3 disaster recovery techniques](https://www.criticalcase.com/blog/3-disaster-recovery-techniques.html)

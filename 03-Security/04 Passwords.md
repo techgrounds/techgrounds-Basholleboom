@@ -2,11 +2,14 @@
 
 
 ## Key-terms
-Hashing - transforming of key or string into another value, most often used in hash tables  
+Hashing - transforming of key or string into another value, using hash tables, kan data van een willekeurige grootte binden aan een waarde van een standaard grootte.  
 Rainbow table - as per wiki: A rainbow table is a precomputed table for caching the outputs of a cryptographic hash function, usually for cracking password hashes.  
+Salting - willekeurige data toevoegen aan iets voordat je het hashed, zo kan je er bijvoorbeeld voor zorgen dat als 2 mensen hetzelfde wachtwoord hebben ze toch met een verschillende hash eindigen
 
 ## Opdracht
 ### Resultaat
+Hashing: Goed voor data storage en retrieval, wel gevaar voor overlap codes.Als je 1 bit verandert veranderd de hash totaal. Kan slechts dmv veel computerkracht terug van hash naar file, hierdoor geschikt om bijvoorbeeld wachtwoorden op een server op te slaan; je kan kijken of iemand het juiste wachtwoord invuld zonder daadwerkelijk het wachtwoord te hebben
+
 #### Exercise 1 Below are two MD5 password hashes. One is a weak password, the other is a string of 16 randomly generated characters. Try to look up both hashes in a Rainbow Table.
 resultaat na hash cracker:  
 03F6D7D1D9AAE7160C05F71CE485AD31	md5	welldone!  
@@ -33,4 +36,5 @@ krijg steeds "unrecognized hash format", weet niet of dit het bedoelde resultaat
 [hashing](https://www.techtarget.com/searchdatamanagement/definition/hashing#:~:text=Hashing%20is%20the%20process%20of,the%20implementation%20of%20hash%20tables.)  
 [hash function](https://en.wikipedia.org/wiki/Hash_function)  
 [rainbow table](https://en.wikipedia.org/wiki/Rainbow_table)  
-[unshadow note](https://askubuntu.com/questions/383057/how-to-decode-the-hash-password-in-etc-shadow)
+[unshadow note](https://askubuntu.com/questions/383057/how-to-decode-the-hash-password-in-etc-shadow)  
+[symmetric, asymmetric, and hashing](https://www.encryptionconsulting.com/education-center/encryption-vs-hashing/)

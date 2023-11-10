@@ -19,7 +19,8 @@ ufw - Uncomplicated Firewall
 [firewall status](https://www.baeldung.com/linux/firewall-status)
 [bron ander](https://www.layerstack.com/resources/tutorials/Installing-Apache-server-on-Linux-Cloud-Servers)  
 [UFW bron ubuntu](https://help.ubuntu.com/community/UFW)  
-[forum ufw command tip](https://askubuntu.com/questions/448836/how-do-i-with-ufw-deny-all-outgoing-ports-excepting-the-ones-i-need)
+[forum ufw command tip](https://askubuntu.com/questions/448836/how-do-i-with-ufw-deny-all-outgoing-ports-excepting-the-ones-i-need)  
+[software en hardware firewalls](https://www.spiceworks.com/it-security/network-security/articles/top-10-firewall-hardware-devices/)
 
 ### Ervaren problemen
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

@@ -1,7 +1,7 @@
 # Advantages of the cloud
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+SLA - service-level agreement
 
 ## Opdracht
 ### Uitwerking en Resultaat
@@ -13,4 +13,4 @@
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[6 advantages azure](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/benefits-of-cloud-migration/#overview)

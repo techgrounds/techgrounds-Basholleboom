@@ -8,8 +8,16 @@ Een standup is bedoeld om in 15 minuten afgerond te hebben. Zorg ervoor dat jij 
 
 Je kan nadat iedereen is geweest verder ingaan op specifieke problemen.
 
-
+ochtend:  
 Jared: vandaag mogelijk 1 op 1  
 Stephan al gestart, bij advantages of cloud  
 Thomas is kort gestart  
 Bas gaat nu starten  
+
+
+middag:  
+jared bij pricing  
+stephan bij virtual machines  
+thomas storage accounts  
+
+Mededeling van Casper: mocht je goede bronnen hebben deel ze ook met de andere teams

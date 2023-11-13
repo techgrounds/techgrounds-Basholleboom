@@ -1,4 +1,4 @@
-# [Onderwerp]
+# Azure core services
 
 
 ## Key-terms

@@ -1,5 +1,4 @@
-# [Onderwerp]
-
+# Azure virtual network
 
 ## Key-terms
 [Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]

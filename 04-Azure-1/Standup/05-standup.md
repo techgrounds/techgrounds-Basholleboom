@@ -6,4 +6,16 @@ Een standup is bedoeld om in 15 minuten afgerond te hebben. Zorg ervoor dat jij 
 - Wat ga ik doen?
 - Loop ik ergens tegenaan? Heb ik hierbij hulp nodig?
 
-Je kan nadat iedereen is geweest verder ingaan op specifieke problemen.
+Je kan nadat iedereen is geweest verder ingaan op specifieke problemen.  
+
+Ochtend:  
+Jared: 
+Stephan: 
+Thomas: 
+Bas: 
+
+Middag:  
+Jared: 
+Stephan: 
+Thomas: 
+Bas: 

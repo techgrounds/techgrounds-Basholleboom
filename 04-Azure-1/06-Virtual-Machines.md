@@ -7,7 +7,12 @@
 ## Opdracht
 ### Uitwerking en Resultaat
 #### Exercise 1
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+![1](Images/06-setup-1.PNG)  
+![2](Images/06-setup-2.PNG)  
+![3](Images/06-setup-3.PNG)  
+![deploy](Images/06-deploy.PNG)  
+![connected](Images/06-connected.PNG)  
+hierna vm gestopt en verwijderd
 
 ### Ervaren problemen
 #### Exercise 1

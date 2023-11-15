@@ -20,7 +20,23 @@ Maak nieuwe vm, hierin wordt ook een vnet aangemaakt, html en ssh staan aan
 inloggen met ssh lukt  
 misschien moet ik een testopslag aanmaken met daar de standaard website files op en dit linken  
 voor nu is het ssh blokkeren in ieder geval gelukt, ik krijg een time-out bij een ssh login die ik voor de blokade niet kreeg.  
-![ssh blokade](Images/07-ssh-blokade.PNG)
+![ssh blokade](Images/07-ssh-blokade.PNG)  
+ochtendupdate: misschien heb ik de opdracht technisch gezien al afgerond  
+bonus van thomas: apache2 installeren, dan heb je wel website  
+bij setup: 
+        #!/bin/bash
+
+        sudo su
+
+        apt update
+
+        apt install apache2 -y
+
+        ufw allow 'Apache'
+
+        systemctl enable apache2
+
+        systemctl restart apache2
 
 ### Ervaren problemen
 #### Exercise 1

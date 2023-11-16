@@ -1,16 +1,32 @@
 # Azure virtual network
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+VNets - Azure Virtual Networks  
+
 
 ## Opdracht
 ### Uitwerking en Resultaat
 #### Exercise 1
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+In azure een vnet aangemaakt; subnet-1 aangewezen als privesubnet  
+![subnet1 setup](Images/10-subnet1-setup.PNG)  
+
+code voor vm:  
+    #!/bin/bash  
+    sudo su  
+    apt update  
+    apt install apache2 -y  
+    ufw allow 'Apache'  
+    systemctl enable apache2  
+    systemctl restart apache2  
+
+Als ik met het ip-adres probeer te verbinden krijg ik een timeout. Ik vermoed dat dit de bedoeling is. Na een periode hercontroleren doet hij het toch wel. Mogelijk omdat public IP expliciet enabled is (door het hebben van een beschikbaarheidszone?).  
+![ip note](Images/10-ip-note.PNG)  
+Als controle maak een vergelijkbare vm op subnet 2  
+vm2 loopt vast; ik maak hem opnieuw  
 
 ### Ervaren problemen
 #### Exercise 1
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[mogelijke bron ip koppelen](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/associate-public-ip-address-vm?tabs=azure-portal)

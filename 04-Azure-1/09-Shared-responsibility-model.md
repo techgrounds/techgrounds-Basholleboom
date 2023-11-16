@@ -14,4 +14,4 @@
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
 
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[azure shared responsibility model](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)  

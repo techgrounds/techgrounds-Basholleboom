@@ -17,9 +17,10 @@ Bas: bij shared responsibility model, hoopt vandaag klaar te zijn
 Jared wil voorbereiden voor mentorgesprek morgne
 
 Middag:  
-Jared: 
-Stephan: 
-Thomas: 
-Bas: 
+Jared: klaar met de opdrachten  
+Stephan: klaar met de opdrachten  
+Thomas: ontbrak door kpn  
+Bas: klaar met de opdrachten  
+Morgen als Thomas er weer is opdrachten doornemen; S3/Storage Account is ons presentatieonderwerp waar we morgenochtend aan gaan werken.  
 
 Noted:  

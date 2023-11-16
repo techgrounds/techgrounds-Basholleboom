@@ -2,7 +2,10 @@
 
 ## Key-terms
 VNets - Azure Virtual Networks  
-
+Point-to-site VPNs - Het Azure VNet wordt benaderd met een VPN vanaf een on-prem computer  
+Site-to-site VPNs - De on-prem VPN device of gateway wordt verbonden met de Azure VPN Gateway. Hierdoor krijg je effectief 1 groot local network  
+Azure Expressroute - Dit is een fysieke verbinding vanaf je lokale omgeving naar Azure  
+UDR - User defined routing  
 
 ## Opdracht
 ### Uitwerking en Resultaat
@@ -23,6 +26,7 @@ Als ik met het ip-adres probeer te verbinden krijg ik een timeout. Ik vermoed da
 ![ip note](Images/10-ip-note.PNG)  
 Als controle maak een vergelijkbare vm op subnet 2  
 vm2 loopt vast; ik maak hem opnieuw  
+tip van stephan: maak een subnet los van het internet dmv nsg, dan blijft de webpage niet bereikbaar. Ik kan deze oplossing zelf niet vinden. Morgen nog vragen/overleggen.  
 
 ### Ervaren problemen
 #### Exercise 1

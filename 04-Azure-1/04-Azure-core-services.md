@@ -18,7 +18,7 @@ Virtual Machines - on-demand, schaleable computer resource
 Azure App Services - HTTP-based service for hosting web applications, REST APIs, and mobile back ends  
 Azure Container Instances (ACI) - way to package, deploy, and manage cloud applications  
 Azure Kubernetes Service (AKS) - Azure Kubernetes Service (AKS) simplifies deploying a managed Kubernetes cluster in Azure by offloading the operational overhead to Azure. As a hosted Kubernetes service, Azure handles critical tasks, like health monitoring and maintenance.  
-Azure Virtual Desktop - a desktop and app virtualization service that runs on the cloud.
+Azure Virtual Desktop - a desktop and app virtualization service that runs on the cloud.  
 Virtual Networks - Azure Virtual Network is a service that provides the fundamental building block for your private network in Azure. An instance of the service (a virtual network) enables many types of Azure resources to securely communicate with each other, the internet, and on-premises networks. These Azure resources include virtual machines (VMs).  
 VPN Gateway - a service that uses a specific type of virtual network gateway to send encrypted traffic between an Azure virtual network and on-premises locations over the public Internet
 Virtual Network Peering - enables you to seamlessly connect two or more Virtual Networks in Azure  

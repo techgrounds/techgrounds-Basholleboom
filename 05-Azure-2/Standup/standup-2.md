@@ -21,3 +21,18 @@ Jared:
 Stephan:  
 Thomas:  
 Bas:  
+Iedereen heeft leuk de hele dag zitten lezen/kijken over well-architected framework. We hopen dat we ons hiermee diep genoeg verdiept hebben.  
+hoeveelheid diepgang die we nodig hebben voor examen is nog onduidelijk  
+
+vuistregel:  
+A wat iets is  
+b key termen  
+c hoe het gebruikt wordt  
+(d) experimenteer er eens mee  
+
+Hoofdpagina feature is vaak goed  
+
+oefenexamens zullen voor meer duidelijkheid zorgen  
+
+Gouden tip: John Savill heeft goede video's, waar onze groep al naar gekeken heeft.  
+voor de azurites eerste opdracht: stresscommando werkt het beste: commando zou gewoon 'stress' zijn  

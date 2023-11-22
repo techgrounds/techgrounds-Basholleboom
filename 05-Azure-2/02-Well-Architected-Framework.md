@@ -54,6 +54,10 @@ capacity planning
 predictive modeling techniques  
 Integrate routine performance tests in Azure Pipelines  
 
+
+### Video notities
+azure well-architected review
+
 ### Ervaren problemen
 #### Exercise 1
 [Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]

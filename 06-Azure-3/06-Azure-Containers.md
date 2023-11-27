@@ -19,7 +19,7 @@
 
 ### Hoe kan ik deze dienst koppelen aan andere resources?
 
-
+## Notities
 ### Ervaren problemen
 
 ### Gebruikte bronnen

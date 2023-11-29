@@ -2,8 +2,13 @@
 
 ## Theorie
 ### Welk probleem lost X op?
+Support bij problemen  
 
 ### Welke key termen horen bij X?
+Basic  
+Developer  
+Standard  
+Professional Direct  
 
 ### Hoe past X / vervangt X in een on-premises setting?
 
@@ -12,14 +17,9 @@
 ### Wat is het verschil tussen X en andere gelijksoortige diensten?
 
 
-## Praktijk
-### Waar kan ik deze dienst vinden in de console?
-
-### Hoe zet ik deze dienst aan?
-
-### Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Notities
 ### Ervaren problemen
 
 ### Gebruikte bronnen
+[compare support plans](https://azure.microsoft.com/en-us/support/plans)

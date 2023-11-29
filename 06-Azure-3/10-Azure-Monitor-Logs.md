@@ -2,6 +2,9 @@
 
 ## Theorie
 ### Welk probleem lost X op?
+Azure Monitor Logs is a feature of Azure Monitor that collects and organizes log and performance data from monitored resources. Several features of Azure Monitor store their data in Logs and present this data in various ways to assist you in monitoring the performance and availability of your cloud and hybrid applications and their supporting components.  
+
+Along with using existing Azure Monitor features, you can analyze Logs data by using a sophisticated query language that's capable of quickly analyzing millions of records.  
 
 ### Welke key termen horen bij X?
 
@@ -12,14 +15,10 @@
 ### Wat is het verschil tussen X en andere gelijksoortige diensten?
 
 
-## Praktijk
-### Waar kan ik deze dienst vinden in de console?
 
-### Hoe zet ik deze dienst aan?
-
-### Hoe kan ik deze dienst koppelen aan andere resources?
 
 ## Notities
 ### Ervaren problemen
 
 ### Gebruikte bronnen
+[learn monitor logs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-platform-logs)

@@ -8,6 +8,7 @@ You focus on the code that matters most to you, in the most productive language 
 
 ### Welke key termen horen bij X?
 Serverless  
+micro/nano-services  
 
 ### Hoe past X / vervangt X in een on-premises setting?
 
@@ -25,6 +26,9 @@ Functions also integrates with Azure Monitor and Azure Application Insights to p
 Function App  
 
 ### Hoe zet ik deze dienst aan?
+In een function app kan je een functie aanmaken, hierin kan je vervolgens code zetten en integreren  
+
+![voorbeeld](Images/04-functie-voorbeeld.PNG)  
 
 ### Hoe kan ik deze dienst koppelen aan andere resources?
 
@@ -34,3 +38,4 @@ Function App
 ### Gebruikte bronnen
 [learn](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview?pivots=programming-language-csharp)  
 [adam marczak](https://www.youtube.com/watch?v=Vxf-rOEO1q4)  
+[more adam marczak](https://www.youtube.com/watch?v=inaXkN2UrFE&list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM&index=10)  

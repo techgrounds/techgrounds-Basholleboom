@@ -41,3 +41,4 @@ Vermoedde reden tot samenvoeging onderwerpen in 1 punt: Event Grid rout messages
 [adam marczak event grid](https://www.youtube.com/watch?v=TujzkSxJzIA)  
 [queue storage](https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction)  
 [service bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)  
+[microsoft youtube service bus](https://www.youtube.com/watch?v=kfjUSibSico)  

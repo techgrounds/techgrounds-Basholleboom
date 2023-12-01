@@ -26,7 +26,7 @@ In tegenstelling tot andere message brokers als apache is Service Bus een PaaS, 
 
 ### Hoe zet ik deze dienst aan?
 Event Grid Service  
-Queue Storage lijkt een optie te zijn binnen storage accounts 
+Queue Storage lijkt een optie te zijn binnen storage accounts  
 Service Bus Service  
 
 ### Hoe kan ik deze dienst koppelen aan andere resources?
@@ -42,3 +42,4 @@ Vermoedde reden tot samenvoeging onderwerpen in 1 punt: Event Grid rout messages
 [queue storage](https://learn.microsoft.com/en-us/azure/storage/queues/storage-queues-introduction)  
 [service bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)  
 [microsoft youtube service bus](https://www.youtube.com/watch?v=kfjUSibSico)  
+[queue storage vs service bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)  

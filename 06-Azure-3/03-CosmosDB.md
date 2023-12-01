@@ -64,3 +64,4 @@ kan verder geen nieuwe container maken met de beperkte toewijzingen die ik heb.
 [learn](https://learn.microsoft.com/en-us/azure/cosmos-db/introduction)  
 [microsoft youtuber](https://www.youtube.com/watch?v=Jvgh64rvdXU&list=PLLasX02E8BPDd2fKwLCHnmWoyo4bL-oKr)  
 [adam marczak](https://www.youtube.com/watch?v=R_Fi59j6BMo)  
+[more adam](https://www.youtube.com/watch?v=RqD4nMyBazU&list=PLGjZwEtPN7j-Q59JYso3L4_yoCjj2syrM&index=13)

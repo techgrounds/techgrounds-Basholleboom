@@ -2,12 +2,15 @@
 
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+IDE - Integrated development enviroment; bijvoorbeeld VS Code
 
 ## Opdracht
 ### Uitwerking en Resultaat
 #### Exercise 1
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+Installatie gelukt;  
+code  
+    print("Hello world!")  
+werkt
 
 ### Ervaren problemen
 #### Exercise 1

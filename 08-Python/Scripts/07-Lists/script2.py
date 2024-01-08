@@ -7,20 +7,3 @@ for i in range(len(my_list)):
 
     # Print the result
     print(result)
-
-
-
-
-
-
-
-#list = [9, 80, 16, 67, 35]
-#list2 = [80, 16, 67, 35, 9]
-
-#zip(list,list2)
-#print(list+list2)
-
-
-    #list=list[i]
-    #list2=list2[i]
-    #print(list*list2)

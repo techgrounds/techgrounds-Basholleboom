@@ -18,14 +18,19 @@ vms moeten alleen voor website server en ed
     Wees niet bang om verbeteringen in de architectuur voor te stellen of te implementeren, maar maak wel harde keuzes, zodat je de deadline kan halen.
 
 ## Algemene encryptie
+optie binnen services
 
-## firewalls en NSCs
+## firewalls en NSGs
+Azure firewall  
+Azure Network Security Groups (NSG) in services
 
 ## subnets
+in azure VNet
 
 ## scaleable database (voor webserver)
+SQL database
 
-## webserver VM met bereikbaarheid via internet
+## webserver VM (linux) met bereikbaarheid via internet
 
 ## VM admin/management server voor beperkt publiek
 

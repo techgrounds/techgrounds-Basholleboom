@@ -1,0 +1,5 @@
+[what is bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview?tabs=bicep)  
+[bicep vs code extension uitleg](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)  
+[Create Bicep files by using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/visual-studio-code?tabs=CLI)
+[quickstart](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/quickstart-create-bicep-use-visual-studio-code?tabs=CLI)
+[learn modules](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/learn-bicep)

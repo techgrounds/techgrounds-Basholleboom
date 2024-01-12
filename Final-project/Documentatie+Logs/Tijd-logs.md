@@ -11,9 +11,9 @@ Ingelezen in het project, github documentatie opzet gemaakt
 
 
 # Log 09/01  
-Kaders gesteld, meeting gehad met product owner, ingelezen in Bicep, notities opzet indeling
 
 ## Dagverslag (1 zin)  
+Kaders gesteld, meeting gehad met product owner, ingelezen in Bicep, notities opzet indeling
 
 ## Obstakels  
 
@@ -25,6 +25,7 @@ Kaders gesteld, meeting gehad met product owner, ingelezen in Bicep, notities op
 # Log 10/01  
 
 ## Dagverslag (1 zin)  
+Testdeployment VNet+storage Bicep gedaan, opzet draw.io gemaakt, setup gemaakt in Jira, en deels ingelezen in SQL databases voor de toekomstige scaleable webserver database
 
 ## Obstakels  
 
@@ -34,6 +35,7 @@ Kaders gesteld, meeting gehad met product owner, ingelezen in Bicep, notities op
 
 
 # Log 11/01  
+Verder ingelezen in Bicep
 
 ## Dagverslag (1 zin)  
 
@@ -45,6 +47,7 @@ Kaders gesteld, meeting gehad met product owner, ingelezen in Bicep, notities op
 
 
 # Log 12/01  
+Verder ingelezen in Bicep
 
 ## Dagverslag (1 zin)  
 

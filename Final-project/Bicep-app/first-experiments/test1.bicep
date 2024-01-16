@@ -1,7 +1,7 @@
 param location string = resourceGroup().location
 @minLength(3)
 @maxLength(24)
-@description('Provide a name for the storace account. Use only lower case letters and numbers. The name must be unique across Azure.')
+@description('Provide a name for the storage account. Use only lower case letters and numbers. The name must be unique across Azure.')
 param storageAccountname string = 'store${uniqueString(resourceGroup().id)}'
 resource virtualNetwork 'Microsoft.Network/virtualNetworks@2023-06-01' = {
   name: 'exampleVNet'

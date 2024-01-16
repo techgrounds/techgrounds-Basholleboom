@@ -1,0 +1,69 @@
+{
+  "name": "adminserver",
+  "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Compute/virtualMachines/adminserver",
+  "type": "Microsoft.Compute/virtualMachines",
+  "location": "westeurope",
+  "properties": {
+      "hardwareProfile": {
+          "vmSize": "Standard_B1s"
+      },
+      "provisioningState": "Succeeded",
+      "vmId": "84d67914-fb54-441e-96d2-a0cdaaa97165",
+      "additionalCapabilities": {
+          "hibernationEnabled": false
+      },
+      "storageProfile": {
+          "imageReference": {
+              "publisher": "MicrosoftWindowsServer",
+              "offer": "WindowsServer",
+              "sku": "2022-datacenter-azure-edition",
+              "version": "latest",
+              "exactVersion": "20348.2227.240104"
+          },
+          "osDisk": {
+              "osType": "Windows",
+              "name": "adminserver_OsDisk_1_c071288ff0ac478d8f56f0cb20e22931",
+              "createOption": "FromImage",
+              "caching": "ReadWrite",
+              "managedDisk": {
+                  "storageAccountType": "Premium_LRS",
+                  "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Compute/disks/adminserver_OsDisk_1_c071288ff0ac478d8f56f0cb20e22931"
+              },
+              "deleteOption": "Delete",
+              "diskSizeGB": 127
+          },
+          "dataDisks": []
+      },
+      "osProfile": {
+          "computerName": "adminserver",
+          "adminUsername": "Administrator1",
+          "windowsConfiguration": {
+              "provisionVMAgent": true,
+              "enableAutomaticUpdates": true,
+              "patchSettings": {
+                  "patchMode": "AutomaticByOS",
+                  "assessmentMode": "ImageDefault",
+                  "enableHotpatching": false
+              }
+          },
+          "secrets": [],
+          "allowExtensionOperations": true,
+          "requireGuestProvisionSignal": true
+      },
+      "networkProfile": {
+          "networkInterfaces": [
+              {
+                  "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/networkInterfaces/adminserver867",
+                  "properties": {
+                      "deleteOption": "Delete"
+                  }
+              }
+          ]
+      },
+      "diagnosticsProfile": {
+          "bootDiagnostics": {
+              "enabled": true
+          }
+      }
+  }
+}

@@ -1,0 +1,56 @@
+{
+    "name": "adminserver867",
+    "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/networkInterfaces/adminserver867",
+    "etag": "W/\"34b3bdf9-5aaa-4132-bfdf-b98b0d5d33af\"",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "73b28a58-91e6-432b-bca9-386d256ed349",
+        "ipConfigurations": [
+            {
+                "name": "ipconfig1",
+                "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/networkInterfaces/adminserver867/ipConfigurations/ipconfig1",
+                "etag": "W/\"34b3bdf9-5aaa-4132-bfdf-b98b0d5d33af\"",
+                "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.0.0.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/publicIPAddresses/adminserver-ip",
+                        "properties": {
+                            "deleteOption": "Delete"
+                        }
+                    },
+                    "subnet": {
+                        "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/virtualNetworks/adminserver-vnet/subnets/default"
+                    },
+                    "primary": true,
+                    "privateIPAddressVersion": "IPv4"
+                }
+            }
+        ],
+        "dnsSettings": {
+            "dnsServers": [],
+            "appliedDnsServers": [],
+            "internalDomainNameSuffix": "v342wrc0tzcexcfvzidaa40mmf.ax.internal.cloudapp.net"
+        },
+        "macAddress": "60-45-BD-88-D2-34",
+        "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
+        "enableIPForwarding": false,
+        "networkSecurityGroup": {
+            "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/networkSecurityGroups/adminserver-nsg"
+        },
+        "primary": true,
+        "virtualMachine": {
+            "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Compute/virtualMachines/adminserver"
+        },
+        "hostedWorkloads": [],
+        "tapConfigurations": [],
+        "nicType": "Standard",
+        "auxiliaryMode": "None"
+    },
+    "type": "Microsoft.Network/networkInterfaces",
+    "location": "westeurope",
+    "kind": "Regular"
+}

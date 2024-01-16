@@ -1,3 +1,15 @@
+# Log 
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+
 # Log 08/01  
 
 ## Dagverslag (1 zin)  
@@ -61,6 +73,21 @@ Verder ingelezen in Bicep
 # Log 15/01  
 
 ## Dagverslag (1 zin)  
+Inlezing bicep afgerond, basale bicepfile voor resourcegroup aangemaakt
+
+## Obstakels  
+Ik heb niet snel genoeg kunnen vinden of ik voor een automatische naam/locatie kan vragen. Mogelijk geen resourcegroupgedeelte hebben in uiteindelijke bicep
+
+## Oplossingen  
+
+## Learnings  
+
+
+
+# Log 16/01
+
+## Dagverslag (1 zin)  
+Met team benodigde resources opgezet, via de Azure portal een template laten genereren, het VM gedeelte van de template geanalyseerd.
 
 ## Obstakels  
 
@@ -69,8 +96,29 @@ Verder ingelezen in Bicep
 ## Learnings  
 
 
+# Log 17/01
 
-# Log   
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 18/01
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 19/01
 
 ## Dagverslag (1 zin)  
 

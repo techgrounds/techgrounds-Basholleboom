@@ -1,0 +1,22 @@
+{
+  name: 'adminserver-ip'
+  id: '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/publicIPAddresses/adminserver-ip'
+  etag: 'W/"20a02324-b5c5-4e28-ae40-e014dff21056"'
+  location: 'westeurope'
+  properties: {
+    provisioningState: 'Succeeded'
+    resourceGuid: 'bd051672-7892-48f0-a4d8-de7e1c6f8fc3'
+    ipAddress: '52.233.247.113'
+    publicIPAddressVersion: 'IPv4'
+    publicIPAllocationMethod: 'Static'
+    idleTimeoutInMinutes: 4
+    ipTags: []
+    ipConfiguration: {
+      id: '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/networkInterfaces/adminserver867/ipConfigurations/ipconfig1'
+    }
+  }
+  type: 'Microsoft.Network/publicIPAddresses'
+  sku: {
+    name: 'Standard'
+  }
+}

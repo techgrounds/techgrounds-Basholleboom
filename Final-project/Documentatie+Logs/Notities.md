@@ -45,3 +45,27 @@ SQL database
 ## opslaglocatie voor bootstrap/post-deployment scripts
 Mijn aanname voor nu is dat dit samen met de opslag voor de admin kan, aangezien beiden interne/backup elementen zijn. De webserver moet vooral zijn eigen opslag hebben aangezien die het meest in contact staat met de buitenwereld/andere vereisten heeft  
 Ik neem voor nu aan dat de backup met zijn specifieke vereisten ook een eigen database heeft
+
+### Samenvatting
+Storage Account  
+StorageV2 of Blob  
+SQL Database  
+Disk Encryption  
+2 x Virtual Machines  
+2 x Virtual Networks  
+Back-up Recovery Vault  
+Peering van Virtual Networks  
+Key Vault  
+2 x Subnet: Management en Webserver/Applicatie  
+2 x Network Security Groups (NSG) (kan ook los worden aangemaakt)  
+Installeer Apache op Webserver/Applicatie en plaats Placeholder Content  
+
+
+
+
+
+# 15/01
+Maak nu een begin aan mijn eerste bicep files voor het project zelf  
+
+eerste VNetpoging gedaan, ik hoop dat dit zo klopt voor ip ranges
+![1](images/vnet1.PNG)

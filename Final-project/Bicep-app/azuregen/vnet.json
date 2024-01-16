@@ -1,0 +1,33 @@
+{
+    "name": "adminserver-vnet",
+    "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/virtualNetworks/adminserver-vnet",
+    "etag": "W/\"e5dd05f5-338b-4b2f-b327-c36ca3926222\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "westeurope",
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "44cb7daf-9e5a-4b44-88b5-ca06007b4c65",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "default",
+                "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/ad_group/providers/Microsoft.Network/virtualNetworks/adminserver-vnet/subnets/default",
+                "etag": "W/\"e5dd05f5-338b-4b2f-b327-c36ca3926222\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.0.0.0/24",
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/AD_GROUP/providers/Microsoft.Network/networkInterfaces/ADMINSERVER867/ipConfigurations/IPCONFIG1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ]
+    }
+}

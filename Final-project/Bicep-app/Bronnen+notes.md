@@ -7,3 +7,4 @@
 [bicep VM quickstart](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-bicep?tabs=CLI)  
 [microsoft.compute VM](https://learn.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines?pivots=deployment-language-bicep)  
 [VM](https://learn.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines/runcommands?pivots=deployment-language-bicep)
+[template lijst](https://learn.microsoft.com/nl-nl/azure/templates/)

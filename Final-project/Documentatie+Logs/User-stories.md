@@ -28,6 +28,20 @@
 # Als team willen wij een duidelijk overzicht hebben van de Cloud Infrastructuur die de applicatie nodig heeft
 ![3](images/User-stories/03-user-story.PNG)
 
+Storage Account  
+StorageV2 of Blob  
+SQL Database  
+Disk Encryption  
+2 x Virtual Machines  
+2 x Virtual Networks  
+Back-up Recovery Vault  
+Peering van Virtual Networks  
+Key Vault  
+2 x Subnet: Management en Webserver/Applicatie  
+2 x Network Security Groups (NSG)  
+Installeer Apache op Webserver/Applicatie en plaats Placeholder Content  
+
+
 
 # Als klant wil ik een werkende applicatie hebben waarmee ik een veilig netwerk kan deployen
 ![4](images/User-stories/04-user-story.PNG)

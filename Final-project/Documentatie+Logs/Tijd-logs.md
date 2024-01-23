@@ -97,6 +97,7 @@ Met team benodigde resources opgezet, via de Azure portal een template laten gen
 
 
 # Log 17/01
+Template onderdelen geanalyseerd en geprobeerd te integreren.
 
 ## Dagverslag (1 zin)  
 
@@ -108,6 +109,7 @@ Met team benodigde resources opgezet, via de Azure portal een template laten gen
 
 
 # Log 18/01
+Template onderdelen geanalyseerd en geprobeerd te integreren.
 
 ## Dagverslag (1 zin)  
 
@@ -121,6 +123,7 @@ Met team benodigde resources opgezet, via de Azure portal een template laten gen
 # Log 19/01
 
 ## Dagverslag (1 zin)  
+Ziek
 
 ## Obstakels  
 
@@ -128,4 +131,59 @@ Met team benodigde resources opgezet, via de Azure portal een template laten gen
 
 ## Learnings  
 
+
+# Log 22/01
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 23/01
+In plaats van templates te integreren geprobeerd vanuit niets te bouwen met behulp van de template site en ctrl+spatie suggesties. 
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 24/01
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 25/01
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 26/01
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
 

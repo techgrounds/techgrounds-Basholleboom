@@ -1,14 +1,9 @@
-// management server NSGs
-// template
-resource symbolicname 'Microsoft.Network/networkSecurityGroups@2023-04-01' = {
-  name: 'string'
-  location: 'string'
-  tags: {
-    tagName1: 'tagValue1'
-    tagName2: 'tagValue2'
-  }
-  properties: {
-    flushConnection: bool
+param location string = resourceGroup().location
+resource NetworkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
+  name: 'appNSG'
+  location: location
+  properties:{
+    flushConnection: true
     securityRules: [
       {
         id: 'string'

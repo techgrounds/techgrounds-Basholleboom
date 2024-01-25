@@ -1,8 +1,11 @@
+@description('Specifies the location for resources.')
+param location string = 'westeurope'
+
 param storageAccounts_pdsstoragetg_name string = 'pdsstoragetg'
 
 resource storageAccounts_pdsstoragetg_name_resource 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: storageAccounts_pdsstoragetg_name
-  location: 'westeurope'
+  location: location
   sku: {
     name: 'Standard_LRS'
     tier: 'Standard'

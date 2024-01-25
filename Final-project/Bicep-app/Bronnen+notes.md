@@ -7,4 +7,7 @@
 [bicep VM quickstart](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-bicep?tabs=CLI)  
 [microsoft.compute VM](https://learn.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines?pivots=deployment-language-bicep)  
 [VM](https://learn.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines/runcommands?pivots=deployment-language-bicep)
-[template lijst](https://learn.microsoft.com/nl-nl/azure/templates/)
+[template lijst](https://learn.microsoft.com/nl-nl/azure/templates/)  
+[peering](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)  
+[peering 2](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps?toc=%2Fazure%2Fvirtual-network%2Ftoc.json#code-try-8)  
+[peering john savill](https://www.youtube.com/watch?v=J4S6AxYNDtM)  

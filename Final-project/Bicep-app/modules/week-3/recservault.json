@@ -1,0 +1,192 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vaults_recservaulttg_name": {
+            "defaultValue": "recservaulttg",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.RecoveryServices/vaults",
+            "apiVersion": "2023-06-01",
+            "name": "[parameters('vaults_recservaulttg_name')]",
+            "location": "westeurope",
+            "sku": {
+                "name": "RS0",
+                "tier": "Standard"
+            },
+            "properties": {
+                "securitySettings": {
+                    "immutabilitySettings": {
+                        "state": "Disabled"
+                    },
+                    "softDeleteSettings": {
+                        "softDeleteRetentionPeriodInDays": 14,
+                        "softDeleteState": "Enabled"
+                    },
+                    "multiUserAuthorization": "Disabled"
+                },
+                "redundancySettings": {},
+                "publicNetworkAccess": "Enabled",
+                "restoreSettings": {
+                    "crossSubscriptionRestoreSettings": {
+                        "crossSubscriptionRestoreState": "Enabled"
+                    }
+                }
+            }
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('vaults_recservaulttg_name'), '/DefaultPolicy')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_recservaulttg_name'))]"
+            ],
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "instantRPDetails": {},
+                "schedulePolicy": {
+                    "schedulePolicyType": "SimpleSchedulePolicy",
+                    "scheduleRunFrequency": "Daily",
+                    "scheduleRunTimes": [
+                        "2024-01-25T23:30:00Z"
+                    ],
+                    "scheduleWeeklyFrequency": 0
+                },
+                "retentionPolicy": {
+                    "retentionPolicyType": "LongTermRetentionPolicy",
+                    "dailySchedule": {
+                        "retentionTimes": [
+                            "2024-01-25T23:30:00Z"
+                        ],
+                        "retentionDuration": {
+                            "count": 30,
+                            "durationType": "Days"
+                        }
+                    }
+                },
+                "instantRpRetentionRangeInDays": 2,
+                "timeZone": "UTC",
+                "protectedItemsCount": 0
+            }
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('vaults_recservaulttg_name'), '/EnhancedPolicy')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_recservaulttg_name'))]"
+            ],
+            "properties": {
+                "backupManagementType": "AzureIaasVM",
+                "policyType": "V2",
+                "instantRPDetails": {},
+                "schedulePolicy": {
+                    "schedulePolicyType": "SimpleSchedulePolicyV2",
+                    "scheduleRunFrequency": "Hourly",
+                    "hourlySchedule": {
+                        "interval": 4,
+                        "scheduleWindowStartTime": "2024-01-25T08:00:00Z",
+                        "scheduleWindowDuration": 12
+                    }
+                },
+                "retentionPolicy": {
+                    "retentionPolicyType": "LongTermRetentionPolicy",
+                    "dailySchedule": {
+                        "retentionTimes": [
+                            "2024-01-25T08:00:00Z"
+                        ],
+                        "retentionDuration": {
+                            "count": 30,
+                            "durationType": "Days"
+                        }
+                    }
+                },
+                "instantRpRetentionRangeInDays": 2,
+                "timeZone": "UTC",
+                "protectedItemsCount": 0
+            }
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/backupPolicies",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('vaults_recservaulttg_name'), '/HourlyLogBackup')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_recservaulttg_name'))]"
+            ],
+            "properties": {
+                "backupManagementType": "AzureWorkload",
+                "workLoadType": "SQLDataBase",
+                "settings": {
+                    "timeZone": "UTC",
+                    "issqlcompression": false,
+                    "isCompression": false
+                },
+                "subProtectionPolicy": [
+                    {
+                        "policyType": "Full",
+                        "schedulePolicy": {
+                            "schedulePolicyType": "SimpleSchedulePolicy",
+                            "scheduleRunFrequency": "Daily",
+                            "scheduleRunTimes": [
+                                "2024-01-25T23:30:00Z"
+                            ],
+                            "scheduleWeeklyFrequency": 0
+                        },
+                        "retentionPolicy": {
+                            "retentionPolicyType": "LongTermRetentionPolicy",
+                            "dailySchedule": {
+                                "retentionTimes": [
+                                    "2024-01-25T23:30:00Z"
+                                ],
+                                "retentionDuration": {
+                                    "count": 30,
+                                    "durationType": "Days"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "policyType": "Log",
+                        "schedulePolicy": {
+                            "schedulePolicyType": "LogSchedulePolicy",
+                            "scheduleFrequencyInMins": 60
+                        },
+                        "retentionPolicy": {
+                            "retentionPolicyType": "SimpleRetentionPolicy",
+                            "retentionDuration": {
+                                "count": 30,
+                                "durationType": "Days"
+                            }
+                        }
+                    }
+                ],
+                "protectedItemsCount": 0
+            }
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/replicationAlertSettings",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('vaults_recservaulttg_name'), '/defaultAlertSetting')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_recservaulttg_name'))]"
+            ],
+            "properties": {
+                "sendToOwners": "DoNotSend",
+                "customEmailAddresses": []
+            }
+        },
+        {
+            "type": "Microsoft.RecoveryServices/vaults/replicationVaultSettings",
+            "apiVersion": "2023-06-01",
+            "name": "[concat(parameters('vaults_recservaulttg_name'), '/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.RecoveryServices/vaults', parameters('vaults_recservaulttg_name'))]"
+            ],
+            "properties": {}
+        }
+    ]
+}

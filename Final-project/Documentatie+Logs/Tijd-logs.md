@@ -158,6 +158,7 @@ In plaats van templates te integreren geprobeerd vanuit niets te bouwen met behu
 # Log 24/01
 
 ## Dagverslag (1 zin)  
+Eerste VM werkende gekregen, keyvault opgezet, storage voor post deployment scripts opgezet, zitten werken aan recovery service vaults  
 
 ## Obstakels  
 
@@ -167,10 +168,12 @@ In plaats van templates te integreren geprobeerd vanuit niets te bouwen met behu
 
 
 # Log 25/01
+tussentijdse presentatie gemaakt, fixen storage account post deployment scripts, zitten werken aan recovery service vaults, inlezen in peering, linux vm gemaakt  
 
 ## Dagverslag (1 zin)  
 
 ## Obstakels  
+problemen met storage account post deployment scripts, recovery service vaults  
 
 ## Oplossingen  
 

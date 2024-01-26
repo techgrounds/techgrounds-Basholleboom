@@ -1,7 +1,7 @@
 @description('Specifies the location for resources.')
 param location string = 'westeurope'
 
-param virtualMachines_mantest_name string = 'mantest'
+param virtualMachines_mantest_name string = 'manserver'
 param virtualNetworks_manvnet_name string = 'manvnet'
 param publicIPAddresses_mantest_ip_name string = 'mantest-ip'
 param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'

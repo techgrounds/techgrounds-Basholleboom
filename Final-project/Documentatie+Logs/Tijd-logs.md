@@ -181,6 +181,7 @@ problemen met storage account post deployment scripts, recovery service vaults
 
 
 # Log 26/01
+Tussentijdse presentatie gehouden, gewerkt aan recovery service vault  
 
 ## Dagverslag (1 zin)  
 

@@ -52,7 +52,7 @@
                     "schedulePolicyType": "SimpleSchedulePolicy",
                     "scheduleRunFrequency": "Daily",
                     "scheduleRunTimes": [
-                        "2024-01-25T23:30:00Z"
+                        "2024-01-26T19:00:00Z"
                     ],
                     "scheduleWeeklyFrequency": 0
                 },
@@ -60,7 +60,7 @@
                     "retentionPolicyType": "LongTermRetentionPolicy",
                     "dailySchedule": {
                         "retentionTimes": [
-                            "2024-01-25T23:30:00Z"
+                            "2024-01-26T19:00:00Z"
                         ],
                         "retentionDuration": {
                             "count": 30,
@@ -89,7 +89,7 @@
                     "scheduleRunFrequency": "Hourly",
                     "hourlySchedule": {
                         "interval": 4,
-                        "scheduleWindowStartTime": "2024-01-25T08:00:00Z",
+                        "scheduleWindowStartTime": "2024-01-26T08:00:00Z",
                         "scheduleWindowDuration": 12
                     }
                 },
@@ -97,7 +97,7 @@
                     "retentionPolicyType": "LongTermRetentionPolicy",
                     "dailySchedule": {
                         "retentionTimes": [
-                            "2024-01-25T08:00:00Z"
+                            "2024-01-26T08:00:00Z"
                         ],
                         "retentionDuration": {
                             "count": 30,
@@ -132,7 +132,7 @@
                             "schedulePolicyType": "SimpleSchedulePolicy",
                             "scheduleRunFrequency": "Daily",
                             "scheduleRunTimes": [
-                                "2024-01-25T23:30:00Z"
+                                "2024-01-26T19:00:00Z"
                             ],
                             "scheduleWeeklyFrequency": 0
                         },
@@ -140,7 +140,7 @@
                             "retentionPolicyType": "LongTermRetentionPolicy",
                             "dailySchedule": {
                                 "retentionTimes": [
-                                    "2024-01-25T23:30:00Z"
+                                    "2024-01-26T19:00:00Z"
                                 ],
                                 "retentionDuration": {
                                     "count": 30,

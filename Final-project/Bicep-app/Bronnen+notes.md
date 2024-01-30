@@ -11,3 +11,7 @@
 [peering](https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview)  
 [peering 2](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-vnet-vnet-rm-ps?toc=%2Fazure%2Fvirtual-network%2Ftoc.json#code-try-8)  
 [peering john savill](https://www.youtube.com/watch?v=J4S6AxYNDtM)  
+[peering template](https://learn.microsoft.com/en-us/azure/templates/microsoft.peering/peerings?pivots=deployment-language-bicep)  
+[github met veel voorbeeldfiles](https://github.com/mwhooo/azure-biceps/tree/master)  
+[meer github](https://github.com/mwhooo/azure-biceps/tree/master)  
+[module stuff](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-to-resource-group?tabs=azure-cli)  

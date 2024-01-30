@@ -1,0 +1,369 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.24.24.22086",
+      "templateHash": "13437558540095428559"
+    }
+  },
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "westeurope",
+      "metadata": {
+        "description": "Specifies the location for resources."
+      }
+    },
+    "virtualMachines_mantest_name": {
+      "type": "string",
+      "defaultValue": "manserver"
+    },
+    "virtualNetworks_manvnet_name": {
+      "type": "string",
+      "defaultValue": "manvnet"
+    },
+    "publicIPAddresses_mantest_ip_name": {
+      "type": "string",
+      "defaultValue": "mantest-ip"
+    },
+    "networkInterfaces_mantest946_z1_name": {
+      "type": "string",
+      "defaultValue": "mantest946_z1"
+    },
+    "networkSecurityGroups_mantest_nsg_name": {
+      "type": "string",
+      "defaultValue": "mantest-nsg"
+    },
+    "virtualNetworkId": {
+      "type": "string",
+      "defaultValue": "/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet"
+    },
+    "adminUsername": {
+      "type": "string",
+      "defaultValue": "testadmin"
+    },
+    "adminPassword": {
+      "type": "securestring",
+      "defaultValue": "Hotnewpassword01"
+    }
+  },
+  "variables": {
+    "vnetId": "[parameters('virtualNetworkId')]",
+    "subnetRef": "[format('{0}/subnets/{1}', variables('vnetId'), 'default')]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2023-06-01",
+      "name": "[parameters('networkSecurityGroups_mantest_nsg_name')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "RDP",
+            "id": "networkSecurityGroups_mantest_nsg_name_RDP.id",
+            "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+            "properties": {
+              "protocol": "TCP",
+              "sourcePortRange": "*",
+              "destinationPortRange": "3389",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 300,
+              "direction": "Inbound",
+              "sourcePortRanges": [],
+              "destinationPortRanges": [],
+              "sourceAddressPrefixes": [],
+              "destinationAddressPrefixes": []
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-06-01",
+      "name": "[parameters('publicIPAddresses_mantest_ip_name')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+      },
+      "zones": [
+        "1"
+      ],
+      "properties": {
+        "ipAddress": "20.229.120.133",
+        "publicIPAddressVersion": "IPv4",
+        "publicIPAllocationMethod": "Static",
+        "idleTimeoutInMinutes": 4,
+        "ipTags": []
+      }
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-06-01",
+      "name": "[parameters('virtualNetworks_manvnet_name')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "10.10.10.0/24"
+          ]
+        },
+        "encryption": {
+          "enabled": false,
+          "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+          {
+            "name": "default",
+            "id": "virtualNetworks_manvnet_name_default.id",
+            "properties": {
+              "addressPrefixes": [
+                "10.10.10.0/25"
+              ],
+              "delegations": [],
+              "privateEndpointNetworkPolicies": "Disabled",
+              "privateLinkServiceNetworkPolicies": "Enabled",
+              "defaultOutboundAccess": true
+            },
+            "type": "Microsoft.Network/virtualNetworks/subnets"
+          }
+        ],
+        "virtualNetworkPeerings": [
+          {
+            "name": "manpeering",
+            "id": "virtualNetworks_manvnet_name_manpeering.id",
+            "properties": {
+              "peeringState": "Connected",
+              "peeringSyncLevel": "FullyInSync",
+              "remoteVirtualNetwork": {
+                "id": "virtualNetworks_servervnet_externalid"
+              },
+              "allowVirtualNetworkAccess": true,
+              "allowForwardedTraffic": false,
+              "allowGatewayTransit": false,
+              "useRemoteGateways": false,
+              "doNotVerifyRemoteGateways": false,
+              "remoteAddressSpace": {
+                "addressPrefixes": [
+                  "10.20.20.0/24"
+                ]
+              },
+              "remoteVirtualNetworkAddressSpace": {
+                "addressPrefixes": [
+                  "10.20.20.0/24"
+                ]
+              }
+            },
+            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings"
+          }
+        ],
+        "enableDdosProtection": false
+      }
+    },
+    {
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2023-03-01",
+      "name": "[parameters('virtualMachines_mantest_name')]",
+      "location": "[parameters('location')]",
+      "zones": [
+        "1"
+      ],
+      "properties": {
+        "hardwareProfile": {
+          "vmSize": "Standard_B1s"
+        },
+        "additionalCapabilities": {
+          "hibernationEnabled": false
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2022-datacenter-azure-edition",
+            "version": "latest"
+          },
+          "osDisk": {
+            "osType": "Windows",
+            "name": "[format('{0}_OsDisk', parameters('virtualMachines_mantest_name'))]",
+            "createOption": "FromImage",
+            "caching": "ReadWrite",
+            "managedDisk": {
+              "storageAccountType": "Standard_LRS"
+            },
+            "deleteOption": "Delete",
+            "diskSizeGB": 127
+          },
+          "dataDisks": [],
+          "diskControllerType": "SCSI"
+        },
+        "osProfile": {
+          "computerName": "[parameters('virtualMachines_mantest_name')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVMAgent": true,
+            "enableAutomaticUpdates": true,
+            "patchSettings": {
+              "patchMode": "AutomaticByOS",
+              "assessmentMode": "ImageDefault",
+              "enableHotpatching": false
+            },
+            "enableVMAgentPlatformUpdates": false
+          },
+          "secrets": [],
+          "allowExtensionOperations": true
+        },
+        "securityProfile": {
+          "uefiSettings": {
+            "secureBootEnabled": true,
+            "vTpmEnabled": true
+          },
+          "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+              "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mantest946_z1_name'))]",
+              "properties": {
+                "deleteOption": "Detach"
+              }
+            }
+          ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaces_mantest946_z1_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/networkSecurityGroups/securityRules",
+      "apiVersion": "2023-06-01",
+      "name": "[format('{0}/RDP', parameters('networkSecurityGroups_mantest_nsg_name'))]",
+      "properties": {
+        "protocol": "TCP",
+        "sourcePortRange": "*",
+        "destinationPortRange": "3389",
+        "sourceAddressPrefix": "*",
+        "destinationAddressPrefix": "*",
+        "access": "Allow",
+        "priority": 300,
+        "direction": "Inbound",
+        "sourcePortRanges": [],
+        "destinationPortRanges": [],
+        "sourceAddressPrefixes": [],
+        "destinationAddressPrefixes": []
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mantest_nsg_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/subnets",
+      "apiVersion": "2023-06-01",
+      "name": "[format('{0}/default', parameters('virtualNetworks_manvnet_name'))]",
+      "properties": {
+        "addressPrefixes": [
+          "10.10.10.0/25"
+        ],
+        "delegations": [],
+        "privateEndpointNetworkPolicies": "Disabled",
+        "privateLinkServiceNetworkPolicies": "Enabled",
+        "defaultOutboundAccess": true
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_manvnet_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "apiVersion": "2023-06-01",
+      "name": "[format('{0}/manpeering', parameters('virtualNetworks_manvnet_name'))]",
+      "properties": {
+        "peeringState": "Connected",
+        "peeringSyncLevel": "FullyInSync",
+        "remoteVirtualNetwork": {
+          "id": "virtualNetworks_servervnet_externalid"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": false,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": false,
+        "doNotVerifyRemoteGateways": false,
+        "remoteAddressSpace": {
+          "addressPrefixes": [
+            "10.20.20.0/24"
+          ]
+        },
+        "remoteVirtualNetworkAddressSpace": {
+          "addressPrefixes": [
+            "10.20.20.0/24"
+          ]
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', parameters('virtualNetworks_manvnet_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2023-06-01",
+      "name": "[parameters('networkInterfaces_mantest946_z1_name')]",
+      "location": "[parameters('location')]",
+      "kind": "Regular",
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig1",
+            "id": "[variables('subnetRef')]",
+            "etag": "W/\"ac04e5ac-58b6-48ef-b0bf-80b3f8024291\"",
+            "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+            "properties": {
+              "provisioningState": "Succeeded",
+              "privateIPAddress": "10.10.10.4",
+              "privateIPAllocationMethod": "Dynamic",
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mantest_ip_name'))]",
+                "properties": {
+                  "deleteOption": "Detach"
+                }
+              },
+              "subnet": {
+                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', split(format('{0}/default', parameters('virtualNetworks_manvnet_name')), '/')[0], split(format('{0}/default', parameters('virtualNetworks_manvnet_name')), '/')[1])]"
+              },
+              "primary": true,
+              "privateIPAddressVersion": "IPv4"
+            }
+          }
+        ],
+        "dnsSettings": {
+          "dnsServers": []
+        },
+        "enableAcceleratedNetworking": false,
+        "enableIPForwarding": false,
+        "disableTcpStateTracking": false,
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mantest_nsg_name'))]"
+        },
+        "nicType": "Standard",
+        "auxiliaryMode": "None",
+        "auxiliarySku": "None"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroups_mantest_nsg_name'))]",
+        "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicIPAddresses_mantest_ip_name'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks/subnets', split(format('{0}/default', parameters('virtualNetworks_manvnet_name')), '/')[0], split(format('{0}/default', parameters('virtualNetworks_manvnet_name')), '/')[1])]"
+      ]
+    }
+  ]
+}

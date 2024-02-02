@@ -1,31 +1,30 @@
 @description('Specifies the location for resources.')
 param location string = 'westeurope'
 
-param virtualMachines_mantest_name string = 'manserver'
-param virtualNetworks_manvnet_name string = 'manvnet'
-param publicIPAddresses_mantest_ip_name string = 'mantest-ip'
-param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
-param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
-param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
+param virtualMachines_web_name string = 'webvm'
+param virtualNetworks_webvnet_name string = 'webvnet'
+param publicIPAddresses_web_ip_name string = 'webtest-ip'
+param networkInterfaces_web946_z1_name string = 'web946_z1'
+param networkSecurityGroups_web_nsg_name string = 'web-nsg'
+param virtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/servervnet'
 // param subnetName string = 'subnet'
 
 @secure()
 param adminPassword string = 'Hotnewpassword01'
 
-var vnetId = manvirtualNetworkId
+var vnetId = virtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
 
 
-resource networkSecurityGroups_mantest_nsg_name_resource 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
-  name: networkSecurityGroups_mantest_nsg_name
+resource networkSecurityGroups_web_nsg_name_resource 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
+  name: networkSecurityGroups_web_nsg_name
   location: location
   properties: {
     securityRules: [
       {
         name: 'RDP'
-        id: 'networkSecurityGroups_mantest_nsg_name_RDP.id'
+        id: 'networkSecurityGroups_web_nsg_name_RDP.id'
         type: 'Microsoft.Network/networkSecurityGroups/securityRules'
         properties: {
           protocol: 'TCP'
@@ -46,15 +45,15 @@ resource networkSecurityGroups_mantest_nsg_name_resource 'Microsoft.Network/netw
   }
 }
 
-resource publicIPAddresses_mantest_ip_name_resource 'Microsoft.Network/publicIPAddresses@2023-06-01' = {
-  name: publicIPAddresses_mantest_ip_name
+resource publicIPAddresses_web_ip_name_resource 'Microsoft.Network/publicIPAddresses@2023-06-01' = {
+  name: publicIPAddresses_web_ip_name
   location: location
   sku: {
     name: 'Standard'
     tier: 'Regional'
   }
   zones: [
-    '1'
+    '2'
   ]
   properties: {
     ipAddress: '20.229.120.133'
@@ -65,13 +64,13 @@ resource publicIPAddresses_mantest_ip_name_resource 'Microsoft.Network/publicIPA
   }
 }
 
-resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetworks@2023-06-01' = {
-  name: virtualNetworks_manvnet_name
+resource virtualNetworks_webvnet_name_resource 'Microsoft.Network/virtualNetworks@2023-06-01' = {
+  name: virtualNetworks_webvnet_name
   location: location
   properties: {
     addressSpace: {
       addressPrefixes: [
-        '10.10.10.0/24'
+        '10.20.20.0/24'
       ]
     }
     encryption: {
@@ -81,10 +80,10 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
     subnets: [
       {
         name: 'default'
-        id: 'virtualNetworks_manvnet_name_default.id'
+        id: 'virtualNetworks_webnet_name_default.id'
         properties: {
           addressPrefixes: [
-            '10.10.10.0/25'
+            '10.20.20.0/25'
           ]
           delegations: []
           privateEndpointNetworkPolicies: 'Disabled'
@@ -95,9 +94,9 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
       }
 //       {
 //         name: 'AzureFirewallSubnet'
-//         id: 'virtualNetworks_manvnet_name_AzureFirewallSubnet.id'
+//         id: 'virtualNetworks_webvnet_name_AzureFirewallSubnet.id'
 //         properties: {
-//           addressPrefix: '10.10.10.128/26'
+//           addressPrefix: '10.20.20.128/26'
 //           delegations: []
 //           privateEndpointNetworkPolicies: 'Disabled'
 //           privateLinkServiceNetworkPolicies: 'Enabled'
@@ -106,44 +105,44 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
 //         type: 'Microsoft.Network/virtualNetworks/subnets'
 //       }
     ]
-//    virtualNetworkPeerings: [
-//      {
-//        name: 'manpeering'
-//        id: 'virtualNetworks_manvnet_name_manpeering.id'
-//        properties: {
-//          peeringState: 'Connected'
-//          peeringSyncLevel: 'FullyInSync'
-//          remoteVirtualNetwork: {
-//            id: virtualNetworks_webvnet_externalid
-//          }
-//          allowVirtualNetworkAccess: true
-//          allowForwardedTraffic: false
-//          allowGatewayTransit: false
-//          useRemoteGateways: false
-//          doNotVerifyRemoteGateways: false
-//          remoteAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//          remoteVirtualNetworkAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//        }
-//        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
-//      }
-//    ]
+    virtualNetworkPeerings: [
+      {
+        name: 'webpeering'
+        id: 'virtualNetworks_webnet_name_webpeering.id'
+        properties: {
+          peeringState: 'Connected'
+          peeringSyncLevel: 'FullyInSync'
+          remoteVirtualNetwork: {
+            id: 'virtualNetworks_manvnet_externalid'
+          }
+          allowVirtualNetworkAccess: true
+          allowForwardedTraffic: false
+          allowGatewayTransit: false
+          useRemoteGateways: false
+          doNotVerifyRemoteGateways: false
+          remoteAddressSpace: {
+            addressPrefixes: [
+              '10.10.10.0/24'
+            ]
+          }
+          remoteVirtualNetworkAddressSpace: {
+            addressPrefixes: [
+              '10.10.10.0/24'
+            ]
+          }
+        }
+        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
+      }
+    ]
     enableDdosProtection: false
   }
 }
 
-resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-  name: virtualMachines_mantest_name
+resource virtualMachines_web_name_resource 'Microsoft.Compute/virtualMachines@2023-03-01' = {
+  name: virtualMachines_web_name
   location: location
   zones: [
-    '1'
+    '2'
   ]
   properties: {
     hardwareProfile: {
@@ -154,37 +153,36 @@ resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachine
     }
     storageProfile: {
       imageReference: {
-        publisher: 'MicrosoftWindowsServer'
-        offer: 'WindowsServer'
-        sku: '2022-datacenter-azure-edition'
+        publisher: 'canonical'
+        offer: '0001-com-ubuntu-server-focal'
+        sku: '20_04-lts-gen2'
         version: 'latest'
       }
       osDisk: {
-        osType: 'Windows'
-        name: '${virtualMachines_mantest_name}_OsDisk'
+        osType: 'Linux'
+        name: '${virtualMachines_web_name}_OsDisk_1_e5acb590116346329274f26facd223c4'
         createOption: 'FromImage'
         caching: 'ReadWrite'
         managedDisk: {
           storageAccountType: 'Standard_LRS'
-//          id: resourceId('Microsoft.Compute/disks', '${virtualMachines_mantest_name}_OsDisk_1_47512410fb3a490ab9f042f411c992aa')
+//          id: disks_web_OsDisk_1_e5acb590116346329274f26facd223c4_externalid
         }
         deleteOption: 'Delete'
-        diskSizeGB: 127
+        diskSizeGB: 30
       }
       dataDisks: []
       diskControllerType: 'SCSI'
     }
     osProfile: {
-      computerName: virtualMachines_mantest_name
-      adminUsername: adminUsername
+      computerName: virtualMachines_web_name
+      adminUsername: 'testadmin1'
       adminPassword: adminPassword
-      windowsConfiguration: {
+      linuxConfiguration: {
+        disablePasswordAuthentication: false
         provisionVMAgent: true
-        enableAutomaticUpdates: true
         patchSettings: {
-          patchMode: 'AutomaticByOS'
+          patchMode: 'ImageDefault'
           assessmentMode: 'ImageDefault'
-          enableHotpatching: false
         }
         enableVMAgentPlatformUpdates: false
       }
@@ -202,7 +200,7 @@ resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachine
     networkProfile: {
       networkInterfaces: [
         {
-          id: networkInterfaces_mantest946_z1_name_resource.id
+          id: networkInterfaces_web946_z1_name_resource.id
           properties: {
             deleteOption: 'Detach'
           }
@@ -217,8 +215,8 @@ resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachine
   }
 }
 
-resource networkSecurityGroups_mantest_nsg_name_RDP 'Microsoft.Network/networkSecurityGroups/securityRules@2023-06-01' = {
-  name: '${networkSecurityGroups_mantest_nsg_name}/RDP'
+resource networkSecurityGroups_web_nsg_name_RDP 'Microsoft.Network/networkSecurityGroups/securityRules@2023-06-01' = {
+  name: '${networkSecurityGroups_web_nsg_name}/RDP'
   properties: {
     protocol: 'TCP'
     sourcePortRange: '*'
@@ -234,29 +232,29 @@ resource networkSecurityGroups_mantest_nsg_name_RDP 'Microsoft.Network/networkSe
     destinationAddressPrefixes: []
   }
   dependsOn: [
-    networkSecurityGroups_mantest_nsg_name_resource
+    networkSecurityGroups_web_nsg_name_resource
   ]
 }
 
-//resource virtualNetworks_manvnet_name_AzureFirewallSubnet 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
-//  name: '${virtualNetworks_manvnet_name}/AzureFirewallSubnet'
-//  properties: {
-//    addressPrefix: '10.10.10.128/26'
-//    delegations: []
-//    privateEndpointNetworkPolicies: 'Disabled'
-//    privateLinkServiceNetworkPolicies: 'Enabled'
-//    defaultOutboundAccess: true
-//  }
-//  dependsOn: [
-//    virtualNetworks_manvnet_name_resource
-//  ]
-//}
+// resource virtualNetworks_webvnet_name_AzureFirewallSubnet 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
+//   name: '${virtualNetworks_webvnet_name}/AzureFirewallSubnet'
+//   properties: {
+//     addressPrefix: '10.20.20.128/26'
+//     delegations: []
+//     privateEndpointNetworkPolicies: 'Disabled'
+//     privateLinkServiceNetworkPolicies: 'Enabled'
+//     defaultOutboundAccess: true
+//   }
+//   dependsOn: [
+//     virtualNetworks_webvnet_name_resource
+//   ]
+// }
 
-resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/default'
+resource virtualNetworks_webvnet_name_default 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
+  name: '${virtualNetworks_webvnet_name}/default'
   properties: {
     addressPrefixes: [
-      '10.10.10.0/25'
+      '10.20.20.0/25'
     ]
     delegations: []
     privateEndpointNetworkPolicies: 'Disabled'
@@ -264,41 +262,41 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
     defaultOutboundAccess: true
   }
   dependsOn: [
-    virtualNetworks_manvnet_name_resource
+    virtualNetworks_webvnet_name_resource
   ]
 }
 
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
+resource virtualNetworks_webvnet_name_webpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
+  name: '${virtualNetworks_webvnet_name}/webpeering'
   properties: {
     peeringState: 'Connected'
     peeringSyncLevel: 'FullyInSync'
     remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
+      id: 'virtualNetworks_manvnet_externalid'
     }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
     doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
+    remoteAddressSpace: {
+      addressPrefixes: [
+        '10.10.10.0/24'
+      ]
+    }
+    remoteVirtualNetworkAddressSpace: {
+      addressPrefixes: [
+        '10.10.10.0/24'
+      ]
+    }
   }
   dependsOn: [
-    virtualNetworks_manvnet_name_resource
+    virtualNetworks_webvnet_name_resource
   ]
 }
 
-resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
-  name: networkInterfaces_mantest946_z1_name
+resource networkInterfaces_web946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
+  name: networkInterfaces_web946_z1_name
   location: location
   kind: 'Regular'
   properties: {
@@ -310,16 +308,16 @@ resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networ
         type: 'Microsoft.Network/networkInterfaces/ipConfigurations'
         properties: {
           provisioningState: 'Succeeded'
-          privateIPAddress: '10.10.10.4'
+          privateIPAddress: '10.20.20.4'
           privateIPAllocationMethod: 'Dynamic'
           publicIPAddress: {
-            id: publicIPAddresses_mantest_ip_name_resource.id
+            id: publicIPAddresses_web_ip_name_resource.id
             properties: {
               deleteOption: 'Detach'
             }
           }
           subnet: {
-            id: virtualNetworks_manvnet_name_default.id
+            id: virtualNetworks_webvnet_name_default.id
           }
           primary: true
           privateIPAddressVersion: 'IPv4'
@@ -333,7 +331,7 @@ resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networ
     enableIPForwarding: false
     disableTcpStateTracking: false
     networkSecurityGroup: {
-      id: networkSecurityGroups_mantest_nsg_name_resource.id
+      id: networkSecurityGroups_web_nsg_name_resource.id
     }
     nicType: 'Standard'
     auxiliaryMode: 'None'

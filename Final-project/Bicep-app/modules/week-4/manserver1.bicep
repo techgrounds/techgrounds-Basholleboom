@@ -6,15 +6,14 @@ param virtualNetworks_manvnet_name string = 'manvnet'
 param publicIPAddresses_mantest_ip_name string = 'mantest-ip'
 param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
 param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
-param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
+param virtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/servervnet'
 // param subnetName string = 'subnet'
 
 @secure()
 param adminPassword string = 'Hotnewpassword01'
 
-var vnetId = manvirtualNetworkId
+var vnetId = virtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
 
 
@@ -106,35 +105,35 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
 //         type: 'Microsoft.Network/virtualNetworks/subnets'
 //       }
     ]
-//    virtualNetworkPeerings: [
-//      {
-//        name: 'manpeering'
-//        id: 'virtualNetworks_manvnet_name_manpeering.id'
-//        properties: {
-//          peeringState: 'Connected'
-//          peeringSyncLevel: 'FullyInSync'
-//          remoteVirtualNetwork: {
-//            id: virtualNetworks_webvnet_externalid
-//          }
-//          allowVirtualNetworkAccess: true
-//          allowForwardedTraffic: false
-//          allowGatewayTransit: false
-//          useRemoteGateways: false
-//          doNotVerifyRemoteGateways: false
-//          remoteAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//          remoteVirtualNetworkAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//        }
-//        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
-//      }
-//    ]
+    virtualNetworkPeerings: [
+      {
+        name: 'manpeering'
+        id: 'virtualNetworks_manvnet_name_manpeering.id'
+        properties: {
+          peeringState: 'Connected'
+          peeringSyncLevel: 'FullyInSync'
+          remoteVirtualNetwork: {
+            id: 'virtualNetworks_webvnet_externalid'
+          }
+          allowVirtualNetworkAccess: true
+          allowForwardedTraffic: false
+          allowGatewayTransit: false
+          useRemoteGateways: false
+          doNotVerifyRemoteGateways: false
+          remoteAddressSpace: {
+            addressPrefixes: [
+              '10.20.20.0/24'
+            ]
+          }
+          remoteVirtualNetworkAddressSpace: {
+            addressPrefixes: [
+              '10.20.20.0/24'
+            ]
+          }
+        }
+        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
+      }
+    ]
     enableDdosProtection: false
   }
 }
@@ -274,23 +273,23 @@ resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetwo
     peeringState: 'Connected'
     peeringSyncLevel: 'FullyInSync'
     remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
+      id: 'virtualNetworks_webvnet_externalid'
     }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
     doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
+    remoteAddressSpace: {
+      addressPrefixes: [
+        '10.20.20.0/24'
+      ]
+    }
+    remoteVirtualNetworkAddressSpace: {
+      addressPrefixes: [
+        '10.20.20.0/24'
+      ]
+    }
   }
   dependsOn: [
     virtualNetworks_manvnet_name_resource

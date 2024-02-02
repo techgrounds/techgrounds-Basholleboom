@@ -6,15 +6,15 @@ param virtualNetworks_manvnet_name string = 'manvnet'
 param publicIPAddresses_mantest_ip_name string = 'mantest-ip'
 param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
 param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
-param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
+param virtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/servervnet'
+param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/webserver/providers/Microsoft.Network/virtualNetworks/servervnet'
 // param subnetName string = 'subnet'
 
 @secure()
 param adminPassword string = 'Hotnewpassword01'
 
-var vnetId = manvirtualNetworkId
+var vnetId = virtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
 
 
@@ -238,19 +238,19 @@ resource networkSecurityGroups_mantest_nsg_name_RDP 'Microsoft.Network/networkSe
   ]
 }
 
-//resource virtualNetworks_manvnet_name_AzureFirewallSubnet 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
-//  name: '${virtualNetworks_manvnet_name}/AzureFirewallSubnet'
-//  properties: {
-//    addressPrefix: '10.10.10.128/26'
-//    delegations: []
-//    privateEndpointNetworkPolicies: 'Disabled'
-//    privateLinkServiceNetworkPolicies: 'Enabled'
-//    defaultOutboundAccess: true
-//  }
-//  dependsOn: [
-//    virtualNetworks_manvnet_name_resource
-//  ]
-//}
+resource virtualNetworks_manvnet_name_AzureFirewallSubnet 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
+  name: '${virtualNetworks_manvnet_name}/AzureFirewallSubnet'
+  properties: {
+    addressPrefix: '10.10.10.128/26'
+    delegations: []
+    privateEndpointNetworkPolicies: 'Disabled'
+    privateLinkServiceNetworkPolicies: 'Enabled'
+    defaultOutboundAccess: true
+  }
+  dependsOn: [
+    virtualNetworks_manvnet_name_resource
+  ]
+}
 
 resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
   name: '${virtualNetworks_manvnet_name}/default'
@@ -263,38 +263,9 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
     privateLinkServiceNetworkPolicies: 'Enabled'
     defaultOutboundAccess: true
   }
-  dependsOn: [
-    virtualNetworks_manvnet_name_resource
-  ]
-}
-
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
-  properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
-    }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: false
-    allowGatewayTransit: false
-    useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-  }
-  dependsOn: [
-    virtualNetworks_manvnet_name_resource
-  ]
+//  dependsOn: [
+//    virtualNetworks_manvnet_name_resource
+//  ]
 }
 
 resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {

@@ -6,14 +6,15 @@ param virtualNetworks_webvnet_name string = 'webvnet'
 param publicIPAddresses_web_ip_name string = 'webtest-ip'
 param networkInterfaces_web946_z1_name string = 'web946_z1'
 param networkSecurityGroups_web_nsg_name string = 'web-nsg'
-param virtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
+param webvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
+param virtualNetworks_manvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/manvnet'
 // param subnetName string = 'subnet'
 
 @secure()
 param adminPassword string = 'Hotnewpassword01'
 
-var vnetId = virtualNetworkId
+var vnetId = webvirtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
 
 
@@ -105,35 +106,35 @@ resource virtualNetworks_webvnet_name_resource 'Microsoft.Network/virtualNetwork
 //         type: 'Microsoft.Network/virtualNetworks/subnets'
 //       }
     ]
-    virtualNetworkPeerings: [
-      {
-        name: 'webpeering'
-        id: 'virtualNetworks_webnet_name_webpeering.id'
-        properties: {
-          peeringState: 'Connected'
-          peeringSyncLevel: 'FullyInSync'
-          remoteVirtualNetwork: {
-            id: 'virtualNetworks_manvnet_externalid'
-          }
-          allowVirtualNetworkAccess: true
-          allowForwardedTraffic: false
-          allowGatewayTransit: false
-          useRemoteGateways: false
-          doNotVerifyRemoteGateways: false
-          remoteAddressSpace: {
-            addressPrefixes: [
-              '10.10.10.0/24'
-            ]
-          }
-          remoteVirtualNetworkAddressSpace: {
-            addressPrefixes: [
-              '10.10.10.0/24'
-            ]
-          }
-        }
-        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
-      }
-    ]
+//    virtualNetworkPeerings: [
+//      {
+//        name: 'webpeering'
+//        id: 'virtualNetworks_webnet_name_webpeering.id'
+//        properties: {
+//          peeringState: 'Connected'
+//          peeringSyncLevel: 'FullyInSync'
+//          remoteVirtualNetwork: {
+//            id: virtualNetworks_manvnet_externalid
+//          }
+//          allowVirtualNetworkAccess: true
+//          allowForwardedTraffic: false
+//          allowGatewayTransit: false
+//          useRemoteGateways: false
+//          doNotVerifyRemoteGateways: false
+//          remoteAddressSpace: {
+//            addressPrefixes: [
+//              '10.10.10.0/24'
+//            ]
+//          }
+//          remoteVirtualNetworkAddressSpace: {
+//            addressPrefixes: [
+//              '10.10.10.0/24'
+//            ]
+//          }
+//        }
+//        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
+//      }
+//    ]
     enableDdosProtection: false
   }
 }
@@ -175,7 +176,7 @@ resource virtualMachines_web_name_resource 'Microsoft.Compute/virtualMachines@20
     }
     osProfile: {
       computerName: virtualMachines_web_name
-      adminUsername: 'testadmin1'
+      adminUsername: adminUsername
       adminPassword: adminPassword
       linuxConfiguration: {
         disablePasswordAuthentication: false
@@ -272,23 +273,23 @@ resource virtualNetworks_webvnet_name_webpeering 'Microsoft.Network/virtualNetwo
     peeringState: 'Connected'
     peeringSyncLevel: 'FullyInSync'
     remoteVirtualNetwork: {
-      id: 'virtualNetworks_manvnet_externalid'
+      id: virtualNetworks_manvnet_externalid
     }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
     doNotVerifyRemoteGateways: false
-    remoteAddressSpace: {
-      addressPrefixes: [
-        '10.10.10.0/24'
-      ]
-    }
-    remoteVirtualNetworkAddressSpace: {
-      addressPrefixes: [
-        '10.10.10.0/24'
-      ]
-    }
+//    remoteAddressSpace: {
+//      addressPrefixes: [
+//        '10.10.10.0/24'
+//      ]
+//    }
+//    remoteVirtualNetworkAddressSpace: {
+//      addressPrefixes: [
+//        '10.10.10.0/24'
+//      ]
+//    }
   }
   dependsOn: [
     virtualNetworks_webvnet_name_resource

@@ -5,3 +5,11 @@ module manmodule './manserver.bicep' = {
 module webmodule './webserver.bicep' = {
   name: 'web-server'
 }
+
+//module peering './peering1.bicep' = {
+//  name: 'peering'
+//  dependsOn: [
+//    manmodule
+//    webmodule
+//  ]
+//}

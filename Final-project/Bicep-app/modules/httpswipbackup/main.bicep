@@ -14,7 +14,6 @@ module manserver 'manserver.bicep' = {
     location: location
     publicIpName: 'manpublicIP'
     zone: '1'
-    adminPassword: 'Hotnewpassword01'
   }
   dependsOn:[keyvault]
 }

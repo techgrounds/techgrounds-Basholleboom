@@ -163,3 +163,13 @@ Thomas:
 Bas: weer bezig met recovery vault  
 
 ### meeting
+
+## 20/02
+
+Jarno: Bezig met self-certification, aanmaken lukt, terugvinden half, converten naar pfx bestand lukt niet    
+Said: Bezig met recovery vault  
+Thomas:  
+Bas: Verscheidene dingen afgerond noot: ping -c 4 <webserver> voor connectie via bastion   
+
+### meeting
+

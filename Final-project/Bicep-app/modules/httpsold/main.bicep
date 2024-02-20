@@ -22,6 +22,7 @@ module webserver 'webserver.bicep' = {
 name: 'web-server'
 params:{
   location:location
+  zone: '2'
 //  virtualNetworkName: 'webpublicIP'
 }
 dependsOn:[keyvault]
@@ -30,19 +31,10 @@ dependsOn:[keyvault]
 module peering 'peering.bicep' = {
   name: 'peering'
   params:{
-    ManVirtualNetworkResourceGroupName: resourceGroup().name
-    WebVirtualNetworkResourceGroupName: resourceGroup().name
+    ManVirtualNetworkResourceGroupName: 'test'
+    WebVirtualNetworkResourceGroupName: 'test'
     manvnet: 'manvnet'
     webvnet: 'webvnet'
   }
   dependsOn:[manserver, webserver]
-}
-
-module backupvault 'recoveryservicechatgpt.bicep' = {
-  name: 'backup'
-  params:{
-    virtualMachineName: 'webvmss'
-    virtualMachineResourceGroup: resourceGroup().name
-  }
-  dependsOn:[webserver]
 }

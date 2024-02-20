@@ -4,7 +4,7 @@ param adminUsername string = 'Mainadmin'
 @description('Password for the Virtual Machine.')
 @minLength(12)
 @secure()
-param adminPassword string 
+param adminPassword string = newGuid()
 
 @description('Unique DNS Name for the Public IP used to access the Virtual Machine.')
 param dnsLabelPrefix string = toLower('${vmName}-${uniqueString(resourceGroup().id, vmName)}')
@@ -147,7 +147,7 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2023-09-0
           destinationPortRange: '22'
           protocol: 'Tcp'
           sourcePortRange: '*'
-          sourceAddressPrefix: '*' // Replace with the actual NSG ID of your VM
+          sourceAddressPrefix: '10.0.0.0' // Replace with the actual NSG ID of your VM
           destinationAddressPrefix: '*'
         }
       }

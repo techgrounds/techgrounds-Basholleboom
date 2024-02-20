@@ -31,6 +31,8 @@ param adminUsername string = 'Mainadmin'
 @description('Default location')
 param location string = resourceGroup().location
 
+param zone string
+
 @description('Admin password on all VMs.')
 @secure()
 param adminPassword string = newGuid()
@@ -49,6 +51,8 @@ var virtualNetworkName = 'webvnet'
 var subnetName = '${vmScaleSetName}subnet'
 var nicName = '${vmScaleSetName}nic'
 var ipConfigName = '${vmScaleSetName}ipconfig'
+param appName string
+var certName = '${appName}-cert'
 var osType = {
   'Ubuntu-1804': {
     publisher: 'Canonical'
@@ -179,7 +183,10 @@ resource appGw 'Microsoft.Network/applicationGateways@2022-11-01' = {
           frontendPort: {
             id: resourceId('Microsoft.Network/applicationGateways/frontendPorts', appGwName, 'appGwFrontendPort')
           }
-          protocol: 'Http'
+          protocol: 'Https'
+          sslCertificate:{
+            id: certName
+          }
         }
       }
     ]
@@ -208,8 +215,18 @@ resource appGw 'Microsoft.Network/applicationGateways@2022-11-01' = {
   ]
 }
 
+resource selfSignedCert 'Microsoft.Network/applicationGateways/sslCertificates@2020-12-01' = {
+  name: certName
+  parent: appGw
+  properties: {
+    data: '<base64EncodedCertificate>'
+    password: '<certificatePassword>'
+  }
+}
+
 resource vmss 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
   name: vmScaleSetName
+  zones: zone
   location: location
   sku: {
     name: vmSku

@@ -191,3 +191,185 @@ Tussentijdse presentatie gehouden, gewerkt aan recovery service vault
 
 ## Learnings  
 
+
+# Log 29/01
+Peering  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 30/01
+Peering  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 31/01
+Peering  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 01/02
+Peering  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 02/02
+Peering/ziek  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 05/02
+Peering  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+# Log 06/02
+key vault  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+
+
+# Log 07/02
+Refactoring met github microsoft templates
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 08/02
+Refactoring met github microsoft templates, including modular setup 
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 09/02
+Afwezig ivm verwonde duim
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 12/02
+Peering praktisch af, gewerkt aan keys  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 13/02
+Verder aan keys gewerkt, VMs verder uitgewerkt voor setup scale servers, inlezing scale servers  
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 14/02
+
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 15/02
+
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+
+# Log 16/02
+
+
+## Dagverslag (1 zin)  
+
+## Obstakels  
+
+## Oplossingen  
+
+## Learnings  
+
+

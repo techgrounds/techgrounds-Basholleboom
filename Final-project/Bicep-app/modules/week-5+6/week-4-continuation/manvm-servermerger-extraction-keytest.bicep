@@ -8,14 +8,41 @@ param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
 param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
 param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/webvnet'
-// param subnetName string = 'subnet'
 
 @secure()
 param adminPassword string = 'Hotnewpassword01'
 
 var vnetId = manvirtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
+resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
+  name: 'name'
+  location: location
+  properties: {
+    enabledForDeployment: true
+    enabledForTemplateDeployment: true
+    enabledForDiskEncryption: true
+    tenantId: 'tenantId'
+    accessPolicies: [
+      {
+        tenantId: 'tenantId'
+        objectId: 'objectId'
+        permissions: {
+          keys: [
+            'get'
+          ]
+          secrets: [
+            'list'
+            'get'
+          ]
+        }
+      }
+    ]
+    sku: {
+      name: 'standard'
+      family: 'A'
+    }
+  }
+}
 
 
 resource networkSecurityGroups_mantest_nsg_name_resource 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
@@ -93,50 +120,9 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
         }
         type: 'Microsoft.Network/virtualNetworks/subnets'
       }
-//       {
-//         name: 'AzureFirewallSubnet'
-//         id: 'virtualNetworks_manvnet_name_AzureFirewallSubnet.id'
-//         properties: {
-//           addressPrefix: '10.10.10.128/26'
-//           delegations: []
-//           privateEndpointNetworkPolicies: 'Disabled'
-//           privateLinkServiceNetworkPolicies: 'Enabled'
-//           defaultOutboundAccess: true
-//         }
-//         type: 'Microsoft.Network/virtualNetworks/subnets'
-//       }
+
     ]
-//    virtualNetworkPeerings: [
-//      {
-//        name: 'manpeering'
-//        id: 'virtualNetworks_manvnet_name_manpeering.id'
-//        properties: {
-//          peeringState: 'Connected'
-//          peeringSyncLevel: 'FullyInSync'
-//          remoteVirtualNetwork: {
-//            id: virtualNetworks_webvnet_externalid
-//          }
-//          allowVirtualNetworkAccess: true
-//          allowForwardedTraffic: false
-//          allowGatewayTransit: false
-//          useRemoteGateways: false
-//          doNotVerifyRemoteGateways: false
-//          remoteAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//          remoteVirtualNetworkAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//        }
-//        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
-//      }
-//    ]
-    enableDdosProtection: false
-  }
+
 }
 
 resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachines@2023-03-01' = {
@@ -164,9 +150,15 @@ resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachine
         name: '${virtualMachines_mantest_name}_OsDisk'
         createOption: 'FromImage'
         caching: 'ReadWrite'
+        encryptionSettings:{
+          enabled: true
+          diskEncryptionKey:{ 
+            secretUrl
+          }
+        }
         managedDisk: {
           storageAccountType: 'Standard_LRS'
-//          id: resourceId('Microsoft.Compute/disks', '${virtualMachines_mantest_name}_OsDisk_1_47512410fb3a490ab9f042f411c992aa')
+          
         }
         deleteOption: 'Delete'
         diskSizeGB: 127
@@ -268,34 +260,6 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
   ]
 }
 
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
-  properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
-    }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: false
-    allowGatewayTransit: false
-    useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-  }
-  dependsOn: [
-    virtualNetworks_manvnet_name_resource
-  ]
-}
 
 resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
   name: networkInterfaces_mantest946_z1_name

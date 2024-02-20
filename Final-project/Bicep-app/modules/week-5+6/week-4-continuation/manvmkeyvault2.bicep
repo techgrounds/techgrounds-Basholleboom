@@ -1,26 +1,100 @@
-@description('Specifies the location for resources.')
-param location string = 'westeurope'
-
-param virtualMachines_mantest_name string = 'manserver'
+param vaults_keyvaulttg_name string = 'keyvaulttg2'
 param virtualNetworks_manvnet_name string = 'manvnet'
+param virtualMachines_manserver_name string = 'manserver'
 param publicIPAddresses_mantest_ip_name string = 'mantest-ip'
 param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
 param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
+param diskEncryptionSets_diskencryptionset_name string = 'diskencryptionset'
 param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
-param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/webvnet'
-// param subnetName string = 'subnet'
 
-@secure()
-param adminPassword string = 'Hotnewpassword01'
 
 var vnetId = manvirtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
 
+resource vaults_keyvaulttg_name_resource 'Microsoft.KeyVault/vaults@2023-07-01' = {
+  name: vaults_keyvaulttg_name
+  location: 'westeurope'
+  properties: {
+    sku: {
+      family: 'A'
+      name: 'standard'
+    }
+    tenantId: 'de60b253-74bd-4365-b598-b9e55a2b208d'
+    accessPolicies: [
+      {
+        tenantId: 'de60b253-74bd-4365-b598-b9e55a2b208d'
+        objectId: '9f264c06-3eac-41ba-a66b-d504b888fb9c'
+        permissions: {
+          keys: [
+            'Get'
+            'List'
+            'Update'
+            'Create'
+            'Import'
+            'Delete'
+            'Recover'
+            'Backup'
+            'Restore'
+            'GetRotationPolicy'
+            'SetRotationPolicy'
+            'Rotate'
+          ]
+          secrets: [
+            'Get'
+            'List'
+            'Set'
+            'Delete'
+            'Recover'
+            'Backup'
+            'Restore'
+          ]
+          certificates: [
+            'Get'
+            'List'
+            'Update'
+            'Create'
+            'Import'
+            'Delete'
+            'Recover'
+            'Backup'
+            'Restore'
+            'ManageContacts'
+            'ManageIssuers'
+            'GetIssuers'
+            'ListIssuers'
+            'SetIssuers'
+            'DeleteIssuers'
+          ]
+        }
+      }
+      {
+        tenantId: 'de60b253-74bd-4365-b598-b9e55a2b208d'
+        objectId: 'd37a0e56-c3c2-4e60-a653-746344a8bc43'
+        permissions: {
+          keys: [
+            'get'
+            'wrapkey'
+            'unwrapkey'
+          ]
+        }
+      }
+    ]
+    enabledForDeployment: false
+    enabledForDiskEncryption: false
+    enabledForTemplateDeployment: false
+    enableSoftDelete: true
+    softDeleteRetentionInDays: 90
+    enableRbacAuthorization: false
+    enablePurgeProtection: true
+    vaultUri: 'https://${vaults_keyvaulttg_name}.vault.azure.net/'
+    provisioningState: 'Succeeded'
+    publicNetworkAccess: 'Enabled'
+  }
+}
 
 resource networkSecurityGroups_mantest_nsg_name_resource 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
   name: networkSecurityGroups_mantest_nsg_name
-  location: location
+  location: 'westeurope'
   properties: {
     securityRules: [
       {
@@ -48,7 +122,7 @@ resource networkSecurityGroups_mantest_nsg_name_resource 'Microsoft.Network/netw
 
 resource publicIPAddresses_mantest_ip_name_resource 'Microsoft.Network/publicIPAddresses@2023-06-01' = {
   name: publicIPAddresses_mantest_ip_name
-  location: location
+  location: 'westeurope'
   sku: {
     name: 'Standard'
     tier: 'Regional'
@@ -57,17 +131,20 @@ resource publicIPAddresses_mantest_ip_name_resource 'Microsoft.Network/publicIPA
     '1'
   ]
   properties: {
-    ipAddress: '20.229.120.133'
+    ipAddress: '52.149.126.116'
     publicIPAddressVersion: 'IPv4'
     publicIPAllocationMethod: 'Static'
     idleTimeoutInMinutes: 4
     ipTags: []
+    ddosSettings: {
+      protectionMode: 'VirtualNetworkInherited'
+    }
   }
 }
 
 resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetworks@2023-06-01' = {
   name: virtualNetworks_manvnet_name
-  location: location
+  location: 'westeurope'
   properties: {
     addressSpace: {
       addressPrefixes: [
@@ -93,128 +170,42 @@ resource virtualNetworks_manvnet_name_resource 'Microsoft.Network/virtualNetwork
         }
         type: 'Microsoft.Network/virtualNetworks/subnets'
       }
-//       {
-//         name: 'AzureFirewallSubnet'
-//         id: 'virtualNetworks_manvnet_name_AzureFirewallSubnet.id'
-//         properties: {
-//           addressPrefix: '10.10.10.128/26'
-//           delegations: []
-//           privateEndpointNetworkPolicies: 'Disabled'
-//           privateLinkServiceNetworkPolicies: 'Enabled'
-//           defaultOutboundAccess: true
-//         }
-//         type: 'Microsoft.Network/virtualNetworks/subnets'
-//       }
     ]
-//    virtualNetworkPeerings: [
-//      {
-//        name: 'manpeering'
-//        id: 'virtualNetworks_manvnet_name_manpeering.id'
-//        properties: {
-//          peeringState: 'Connected'
-//          peeringSyncLevel: 'FullyInSync'
-//          remoteVirtualNetwork: {
-//            id: virtualNetworks_webvnet_externalid
-//          }
-//          allowVirtualNetworkAccess: true
-//          allowForwardedTraffic: false
-//          allowGatewayTransit: false
-//          useRemoteGateways: false
-//          doNotVerifyRemoteGateways: false
-//          remoteAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//          remoteVirtualNetworkAddressSpace: {
-//            addressPrefixes: [
-//              '10.20.20.0/24'
-//            ]
-//          }
-//        }
-//        type: 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings'
-//      }
-//    ]
+    virtualNetworkPeerings: []
     enableDdosProtection: false
   }
 }
 
-resource virtualMachines_mantest_name_resource 'Microsoft.Compute/virtualMachines@2023-03-01' = {
-  name: virtualMachines_mantest_name
-  location: location
-  zones: [
-    '1'
-  ]
+resource diskEncryptionSets_diskencryptionset_name_resource 'Microsoft.Compute/diskEncryptionSets@2023-01-02' = {
+  name: diskEncryptionSets_diskencryptionset_name
+  location: 'westeurope'
+  identity: {
+    type: 'SystemAssigned'
+  }
   properties: {
-    hardwareProfile: {
-      vmSize: 'Standard_B1s'
-    }
-    additionalCapabilities: {
-      hibernationEnabled: false
-    }
-    storageProfile: {
-      imageReference: {
-        publisher: 'MicrosoftWindowsServer'
-        offer: 'WindowsServer'
-        sku: '2022-datacenter-azure-edition'
-        version: 'latest'
+    activeKey: {
+      sourceVault: {
+        id: vaults_keyvaulttg_name_resource.id
       }
-      osDisk: {
-        osType: 'Windows'
-        name: '${virtualMachines_mantest_name}_OsDisk'
-        createOption: 'FromImage'
-        caching: 'ReadWrite'
-        managedDisk: {
-          storageAccountType: 'Standard_LRS'
-//          id: resourceId('Microsoft.Compute/disks', '${virtualMachines_mantest_name}_OsDisk_1_47512410fb3a490ab9f042f411c992aa')
-        }
-        deleteOption: 'Delete'
-        diskSizeGB: 127
-      }
-      dataDisks: []
-      diskControllerType: 'SCSI'
+      keyUrl: 'https://keyvaulttg.vault.azure.net/keys/mankey/202c4f9c144d41f6b4b805264fb6b3ed'
     }
-    osProfile: {
-      computerName: virtualMachines_mantest_name
-      adminUsername: adminUsername
-      adminPassword: adminPassword
-      windowsConfiguration: {
-        provisionVMAgent: true
-        enableAutomaticUpdates: true
-        patchSettings: {
-          patchMode: 'AutomaticByOS'
-          assessmentMode: 'ImageDefault'
-          enableHotpatching: false
-        }
-        enableVMAgentPlatformUpdates: false
-      }
-      secrets: []
-      allowExtensionOperations: true
-//      requireGuestProvisionSignal: false
-    }
-    securityProfile: {
-      uefiSettings: {
-        secureBootEnabled: true
-        vTpmEnabled: true
-      }
-      securityType: 'TrustedLaunch'
-    }
-    networkProfile: {
-      networkInterfaces: [
-        {
-          id: networkInterfaces_mantest946_z1_name_resource.id
-          properties: {
-            deleteOption: 'Detach'
-          }
-        }
-      ]
-    }
-    diagnosticsProfile: {
-      bootDiagnostics: {
-        enabled: true
-      }
+    encryptionType: 'EncryptionAtRestWithCustomerKey'
+  }
+}
+
+resource vaults_keyvaulttg_name_mankey 'Microsoft.KeyVault/vaults/keys@2023-07-01' = {
+  parent: vaults_keyvaulttg_name_resource
+  name: 'mankey'
+  location: 'westeurope'
+  properties: {
+    attributes: {
+      enabled: true
+      exportable: false
     }
   }
+  dependsOn:[
+    virtualMachines_manserver_name_resource
+  ]
 }
 
 resource networkSecurityGroups_mantest_nsg_name_RDP 'Microsoft.Network/networkSecurityGroups/securityRules@2023-06-01' = {
@@ -238,20 +229,6 @@ resource networkSecurityGroups_mantest_nsg_name_RDP 'Microsoft.Network/networkSe
   ]
 }
 
-//resource virtualNetworks_manvnet_name_AzureFirewallSubnet 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
-//  name: '${virtualNetworks_manvnet_name}/AzureFirewallSubnet'
-//  properties: {
-//    addressPrefix: '10.10.10.128/26'
-//    delegations: []
-//    privateEndpointNetworkPolicies: 'Disabled'
-//    privateLinkServiceNetworkPolicies: 'Enabled'
-//    defaultOutboundAccess: true
-//  }
-//  dependsOn: [
-//    virtualNetworks_manvnet_name_resource
-//  ]
-//}
-
 resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks/subnets@2023-06-01' = {
   name: '${virtualNetworks_manvnet_name}/default'
   properties: {
@@ -268,45 +245,96 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
   ]
 }
 
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
-  properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
-    }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: false
-    allowGatewayTransit: false
-    useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-  }
-  dependsOn: [
-    virtualNetworks_manvnet_name_resource
+resource virtualMachines_manserver_name_resource 'Microsoft.Compute/virtualMachines@2023-03-01' = {
+  name: virtualMachines_manserver_name
+  location: 'westeurope'
+  zones: [
+    '1'
   ]
+  properties: {
+    hardwareProfile: {
+      vmSize: 'Standard_B1s'
+    }
+    additionalCapabilities: {
+      hibernationEnabled: false
+    }
+    storageProfile: {
+      imageReference: {
+        publisher: 'MicrosoftWindowsServer'
+        offer: 'WindowsServer'
+        sku: '2022-datacenter-azure-edition'
+        version: 'latest'
+      }
+      osDisk: {
+        osType: 'Windows'
+        name: '${virtualMachines_manserver_name}_OsDisk'
+        createOption: 'FromImage'
+        caching: 'ReadWrite'
+        managedDisk: {
+          diskEncryptionSet: {
+            id: diskEncryptionSets_diskencryptionset_name_resource.id
+          }
+          storageAccountType: 'Standard_LRS'
+          id: resourceId('Microsoft.Compute/disks', '${virtualMachines_manserver_name}_OsDisk')
+        }
+        deleteOption: 'Delete'
+        diskSizeGB: 127
+      }
+      dataDisks: []
+      diskControllerType: 'SCSI'
+    }
+    osProfile: {
+      computerName: virtualMachines_manserver_name
+      adminUsername: 'testadmin'
+      windowsConfiguration: {
+        provisionVMAgent: true
+        enableAutomaticUpdates: true
+        patchSettings: {
+          patchMode: 'AutomaticByOS'
+          assessmentMode: 'ImageDefault'
+          enableHotpatching: false
+        }
+        enableVMAgentPlatformUpdates: false
+      }
+      secrets: []
+      allowExtensionOperations: true
+      requireGuestProvisionSignal: true
+    }
+    securityProfile: {
+      uefiSettings: {
+        secureBootEnabled: true
+        vTpmEnabled: true
+      }
+      securityType: 'TrustedLaunch'
+    }
+    networkProfile: {
+      networkInterfaces: [
+        {
+          id: 'networkInterfaces_mantest946_z1_name_resource.id'
+          properties: {
+            deleteOption: 'Detach'
+          }
+        }
+      ]
+    }
+    diagnosticsProfile: {
+      bootDiagnostics: {
+        enabled: true
+      }
+    }
+  }
 }
 
 resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
   name: networkInterfaces_mantest946_z1_name
-  location: location
+  location: 'westeurope'
   kind: 'Regular'
   properties: {
     ipConfigurations: [
       {
         name: 'ipconfig1'
         id: subnetRef
-        etag: 'W/"ac04e5ac-58b6-48ef-b0bf-80b3f8024291"'
+        etag: 'W/"32ad1f79-8e48-47af-85bb-094034935146"'
         type: 'Microsoft.Network/networkInterfaces/ipConfigurations'
         properties: {
           provisioningState: 'Succeeded'

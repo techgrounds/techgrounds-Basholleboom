@@ -268,34 +268,7 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
   ]
 }
 
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
-  properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
-    }
-    allowVirtualNetworkAccess: true
-    allowForwardedTraffic: false
-    allowGatewayTransit: false
-    useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-  }
-  dependsOn: [
-    virtualNetworks_manvnet_name_resource
-  ]
-}
+
 
 resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
   name: networkInterfaces_mantest946_z1_name

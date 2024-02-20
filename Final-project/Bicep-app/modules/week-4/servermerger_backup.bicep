@@ -8,7 +8,7 @@ param networkInterfaces_mantest946_z1_name string = 'mantest946_z1'
 param networkSecurityGroups_mantest_nsg_name string = 'mantest-nsg'
 param manvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
 param adminUsername string = 'testadmin'
-param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/webserver/providers/Microsoft.Network/virtualNetworks/servervnet'
+param virtualNetworks_webvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/webvnet'
 // param subnetName string = 'subnet'
 param virtualMachines_web_name string = 'webvm'
 param virtualNetworks_webvnet_name string = 'webvnet'
@@ -16,10 +16,10 @@ param publicIPAddresses_web_ip_name string = 'webtest-ip'
 param networkInterfaces_web946_z1_name string = 'web946_z1'
 param networkSecurityGroups_web_nsg_name string = 'web-nsg'
 param webvirtualNetworkId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/dev/providers/Microsoft.Network/virtualNetworks/dev_vnet'
-param virtualNetworks_manvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/manserver/providers/Microsoft.Network/virtualNetworks/manvnet'
+param virtualNetworks_manvnet_externalid string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/test/providers/Microsoft.Network/virtualNetworks/manvnet'
+
 @secure()
 param adminPassword string = 'Hotnewpassword01'
-
 
 var vnetId = manvirtualNetworkId
 var subnetRef = '${vnetId}/subnets/${'default'}'
@@ -275,33 +275,21 @@ resource virtualNetworks_manvnet_name_default 'Microsoft.Network/virtualNetworks
   ]
 }
 
-resource virtualNetworks_manvnet_name_manpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_manvnet_name}/manpeering'
+resource peering1 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'virtualNetworkpeering1'
+  parent: virtualNetworks_manvnet_name_resource
   properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_webvnet_externalid
-    }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.20.20.0/24'
-//      ]
-//    }
+    remoteVirtualNetwork: {
+      id: virtualNetworks_webvnet_externalid
+    }
   }
-//  dependsOn: [
-//    virtualNetworks_manvnet_name_resource
-//  ]
+  dependsOn: [
+    virtualNetworks_webvnet_name_resource
+  ]
 }
 
 resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {
@@ -349,11 +337,8 @@ resource networkInterfaces_mantest946_z1_name_resource 'Microsoft.Network/networ
 }
 
 
-// param subnetName string = 'subnet'
 
 
-var webvnetId = webvirtualNetworkId
-var websubnetRef = '${webvnetId}/subnets/${'default'}'
 
 
 resource networkSecurityGroups_web_nsg_name_resource 'Microsoft.Network/networkSecurityGroups@2023-06-01' = {
@@ -514,7 +499,7 @@ resource virtualMachines_web_name_resource 'Microsoft.Compute/virtualMachines@20
     }
     osProfile: {
       computerName: virtualMachines_web_name
-      adminUsername: 'testadmin1'
+      adminUsername: adminUsername
       adminPassword: adminPassword
       linuxConfiguration: {
         disablePasswordAuthentication: false
@@ -605,33 +590,21 @@ resource virtualNetworks_webvnet_name_default 'Microsoft.Network/virtualNetworks
   ]
 }
 
-resource virtualNetworks_webvnet_name_webpeering 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2023-06-01' = {
-  name: '${virtualNetworks_webvnet_name}/webpeering'
+resource peering2 'Microsoft.Network/virtualNetworks/virtualNetworkPeerings@2020-07-01' = {
+  name: 'virtualNetworkpeering2'
+  parent: virtualNetworks_webvnet_name_resource
   properties: {
-    peeringState: 'Connected'
-    peeringSyncLevel: 'FullyInSync'
-    remoteVirtualNetwork: {
-      id: virtualNetworks_manvnet_externalid
-    }
     allowVirtualNetworkAccess: true
     allowForwardedTraffic: false
     allowGatewayTransit: false
     useRemoteGateways: false
-    doNotVerifyRemoteGateways: false
-//    remoteAddressSpace: {
-//      addressPrefixes: [
-//        '10.10.10.0/24'
-//      ]
-//    }
-//    remoteVirtualNetworkAddressSpace: {
-//      addressPrefixes: [
-//        '10.10.10.0/24'
-//      ]
-//    }
+    remoteVirtualNetwork: {
+      id: virtualNetworks_manvnet_externalid
+    }
   }
-//  dependsOn: [
-//    virtualNetworks_webvnet_name_resource
-//  ]
+  dependsOn: [
+    virtualNetworks_manvnet_name_resource
+  ]
 }
 
 resource networkInterfaces_web946_z1_name_resource 'Microsoft.Network/networkInterfaces@2023-06-01' = {

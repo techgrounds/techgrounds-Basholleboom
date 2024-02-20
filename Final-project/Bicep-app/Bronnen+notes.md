@@ -15,3 +15,6 @@
 [github met veel voorbeeldfiles](https://github.com/mwhooo/azure-biceps/tree/master)  
 [meer github](https://github.com/mwhooo/azure-biceps/tree/master)  
 [module stuff](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/deploy-to-resource-group?tabs=azure-cli)  
+[template keyvault](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.keyvault/key-vault-create/main.bicep)  
+[keyvault certificate](https://stackoverflow.com/questions/75920921/generate-azure-key-vault-certificate-with-bicep)  
+[keyvault certificate info](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/key-vault/certificates/create-certificate.md)  

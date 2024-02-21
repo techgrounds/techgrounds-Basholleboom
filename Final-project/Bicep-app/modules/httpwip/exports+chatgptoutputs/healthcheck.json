@@ -1,0 +1,19 @@
+{
+    "type": "extensions",
+    "name": "HealthExtension",
+    "apiVersion": "2018-10-01",
+    "location": "<location>",  
+    "properties": {
+      "publisher": "Microsoft.ManagedServices",
+      "type": "<ApplicationHealthLinux or ApplicationHealthWindows>",
+      "autoUpgradeMinorVersion": true,
+      "typeHandlerVersion": "1.0",
+      "settings": {
+        "protocol": "<protocol>",
+        "port": <port>,
+        "requestPath": "</requestPath>",
+        "intervalInSeconds": 5,
+        "numberOfProbes": 1
+      }
+    }
+  }  

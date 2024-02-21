@@ -39,7 +39,7 @@ module peering 'peering.bicep' = {
   dependsOn:[manserver, webserver]
 }
 
-//module backupvault 'recoveryservicechatgpt.bicep' = {
+//module backupvault 'recoveryservice.bicep' = {
 //  name: 'backup'
 //  params:{
 //    virtualMachineName: 'webvmss'

@@ -12,9 +12,9 @@ resource manvnet_peering_to_webvnet 'Microsoft.Network/virtualNetworks/virtualNe
   name: '${manvnet}/peering-to-webvnet'
   properties: {
     allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: true
-    useRemoteGateways: true
+    allowForwardedTraffic: false
+    allowGatewayTransit: false
+    useRemoteGateways: false
     remoteVirtualNetwork: {
       id: resourceId(WebVirtualNetworkResourceGroupName, 'Microsoft.Network/virtualNetworks', webvnet)
     }
@@ -25,8 +25,9 @@ resource webvnet_peering_to_manvnet 'Microsoft.Network/virtualNetworks/virtualNe
   name: '${webvnet}/peering-to-manvnet'
   properties: {
     allowVirtualNetworkAccess: true
-    allowForwardedTraffic: true
-    allowGatewayTransit: true
+    allowForwardedTraffic: false
+    allowGatewayTransit: false
+    useRemoteGateways: false
     remoteVirtualNetwork: {
       id: resourceId(ManVirtualNetworkResourceGroupName, 'Microsoft.Network/virtualNetworks', manvnet)
     }

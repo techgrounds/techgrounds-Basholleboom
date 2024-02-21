@@ -173,3 +173,30 @@ Bas: Verscheidene dingen afgerond noot: ping -c 4 <webserver> voor connectie via
 
 ### meeting
 
+herhaling: gaat erom dat je werkende code hebt  
+website oproepen ed  
+
+presentatie: Keep it simple stupid  
+bespreek architectuur  
+checklist met features wel/niet gelukt  
+demo; laat zien dat dingen werkt  
+bedenk wel dat deployen tijd kost!  
+reflectie van periode mag ook in presenatie  
+
+
+
+## 21/02
+
+Jarno: Probeert https nog werkend aan het krijgen, puntjes op de i, morgen aan presentatie maken  
+Said: Naar recovery vault aan het kijken  
+Thomas:  
+Bas: bezig met presentatie
+
+### meeting
+Vraag: Werkt recovery vault voor scale sets, en is het dus nog relevant?
+Antwoord: Als iets werkt werkt het  
+Kan mooi Demo-en door VM te verwijderen en naar errors te kijken  
+
+Deel resources in slack
+
+In github laat je over het algemeen alleen de laatste versie staan. Rest staat in commit history  

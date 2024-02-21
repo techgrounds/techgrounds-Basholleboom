@@ -315,6 +315,24 @@ resource vmss 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         adminUsername: adminUsername
         adminPassword: adminPassword
       }
+      extensionProfile: {
+        extensions: [
+          {
+            name: 'HealthExtension'
+            properties: {
+              autoUpgradeMinorVersion: false
+              publisher: 'Microsoft.ManagedServices'
+              type: 'ApplicationHealthLinux'
+              typeHandlerVersion: '1.0'
+              settings: {
+                protocol: 'https'
+                port: 443
+                requestPath: '/'
+              }
+            }
+          }
+        ]
+      }
       securityProfile: ((securityType == 'TrustedLaunch') ? securityProfileJson : null)
       networkProfile: {
         networkInterfaceConfigurations: [
@@ -342,6 +360,10 @@ resource vmss 'Microsoft.Compute/virtualMachineScaleSets@2023-03-01' = {
         ]
       }
     userData:loadFileAsBase64('custom.sh')
+    }
+    automaticRepairsPolicy: {
+      enabled: true
+      gracePeriod: 'PT10M'
     }
   }
   dependsOn: [

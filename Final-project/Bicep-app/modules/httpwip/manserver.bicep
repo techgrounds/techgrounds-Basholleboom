@@ -72,13 +72,15 @@ param vmName string = 'manVM'
 ])
 param securityType string = 'TrustedLaunch'
 
+//param VirtualMachineNetworkSecurityGroupId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/nsgtest/providers/Microsoft.Network/networkSecurityGroups/web-NSG'
+
 var storageAccountName = 'bootdiags${uniqueString(resourceGroup().id)}'
 var nicName = 'manNIC'
 var addressPrefix = '10.10.10.0/24'
 var subnetName = 'ManSubnet'
 var subnetPrefix = '10.10.10.0/25'
 var virtualNetworkName = 'manvnet'
-var networkSecurityGroupName = 'default-NSG'
+var networkSecurityGroupName = 'man-NSG'
 var securityProfileJson = {
   uefiSettings: {
     secureBootEnabled: true
@@ -97,8 +99,40 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   location: location
   sku: {
     name: 'Standard_LRS'
+    tier: 'Standard'
   }
-  kind: 'Storage'
+  kind: 'StorageV2'
+  properties: {
+    dnsEndpointType: 'Standard'
+    defaultToOAuthAuthentication: false
+    publicNetworkAccess: 'Disabled'
+    allowCrossTenantReplication: false
+    minimumTlsVersion: 'TLS1_2'
+    allowBlobPublicAccess: false
+    allowSharedKeyAccess: true
+    networkAcls: {
+      bypass: 'AzureServices'
+      virtualNetworkRules: []
+      ipRules: []
+      defaultAction: 'Deny'
+    }
+    supportsHttpsTrafficOnly: true
+    encryption: {
+      requireInfrastructureEncryption: false
+      services: {
+        file: {
+          keyType: 'Account'
+          enabled: true
+        }
+        blob: {
+          keyType: 'Account'
+          enabled: true
+        }
+      }
+      keySource: 'Microsoft.Storage'
+    }
+    accessTier: 'Hot'
+  }
 }
 
 resource publicIp 'Microsoft.Network/publicIPAddresses@2023-09-01' = {
@@ -134,6 +168,58 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2023-09-0
           sourcePortRange: '*'
           sourceAddressPrefix: '*' //IPS VERTROUWDE LOCATIES HIER IN FORMAT: ['<IP-WERK>', '<IP-THUIS>']
           destinationAddressPrefix: '*'
+        }
+      }
+            {
+        name: 'allow-ssh'
+        properties: {
+          priority: 1001
+          access: 'Allow'
+          direction: 'Inbound'
+          destinationPortRange: '22'
+          protocol: 'Tcp'
+          sourcePortRange: '*'
+          sourceAddressPrefix: '*' // Replace with the actual NSG ID of your VM
+          destinationAddressPrefix: '*'
+        }
+      }
+      {
+        name: 'allow-rdp'
+        properties: {
+          priority: 1002
+          access: 'Allow'
+          direction: 'Inbound'
+          destinationPortRange: '3389'
+          protocol: 'Tcp'
+          sourcePortRange: '*'
+          sourceAddressPrefix: '10.0.0.0' // Replace with the actual NSG ID of your VM
+          destinationAddressPrefix: '*'
+        }
+      }
+      {
+        name: 'httpallow'
+        properties:{
+          access: 'Allow'
+          direction: 'Inbound'
+          priority: 1004
+          protocol: 'Tcp'
+          destinationPortRange: '80'
+          destinationAddressPrefix: '*'
+          sourcePortRange:'*'
+          sourceAddressPrefix: '*'
+        }
+      }
+      {
+        name: 'httpsallow'
+        properties:{
+          access: 'Allow'
+          direction: 'Inbound'
+          priority: 1005
+          protocol: 'Tcp'
+          destinationPortRange: '443'
+          destinationAddressPrefix: '*'
+          sourcePortRange:'*'
+          sourceAddressPrefix: '*'
         }
       }
     ]

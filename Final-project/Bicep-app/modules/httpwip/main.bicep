@@ -14,6 +14,7 @@ module manserver 'manserver.bicep' = {
     location: location
     publicIpName: 'manpublicIP'
     zone: '1'
+    adminPassword: 'Hotnewpassword01'
   }
   dependsOn:[keyvault]
 }
@@ -22,9 +23,7 @@ module webserver 'webserver.bicep' = {
 name: 'web-server'
 params:{
   location:location
-  zone: '2'
-
-  appName: 'name'
+//  virtualNetworkName: 'webpublicIP'
 }
 dependsOn:[keyvault]
 }
@@ -32,10 +31,19 @@ dependsOn:[keyvault]
 module peering 'peering.bicep' = {
   name: 'peering'
   params:{
-    ManVirtualNetworkResourceGroupName: 'test'
-    WebVirtualNetworkResourceGroupName: 'test'
+    ManVirtualNetworkResourceGroupName: resourceGroup().name
+    WebVirtualNetworkResourceGroupName: resourceGroup().name
     manvnet: 'manvnet'
     webvnet: 'webvnet'
   }
   dependsOn:[manserver, webserver]
 }
+
+//module backupvault 'recoveryservice.bicep' = {
+//  name: 'backup'
+//  params:{
+//    virtualMachineName: 'webvmss'
+//    virtualMachineResourceGroup: resourceGroup().name
+//  }
+//  dependsOn:[webserver]
+//}

@@ -14,6 +14,7 @@ module manserver 'manserver.bicep' = {
     location: location
     publicIpName: 'manpublicIP'
     zone: '1'
+    adminPassword: 'Hotnewpassword01'
   }
   dependsOn:[keyvault]
 }
@@ -38,11 +39,11 @@ module peering 'peering.bicep' = {
   dependsOn:[manserver, webserver]
 }
 
-module backupvault 'recoveryservicechatgpt.bicep' = {
-  name: 'backup'
-  params:{
-    virtualMachineName: 'webvmss'
-    virtualMachineResourceGroup: resourceGroup().name
-  }
-  dependsOn:[webserver]
-}
+//module backupvault 'recoveryservicechatgpt.bicep' = {
+//  name: 'backup'
+//  params:{
+//    virtualMachineName: 'webvmss'
+//    virtualMachineResourceGroup: resourceGroup().name
+//  }
+//  dependsOn:[webserver]
+//}

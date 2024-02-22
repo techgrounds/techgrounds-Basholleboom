@@ -1,0 +1,2 @@
+sudo apt-get -y install stress
+sudo stress --cpu 10 --timeout 420

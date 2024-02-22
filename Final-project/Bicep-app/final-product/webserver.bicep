@@ -33,7 +33,7 @@ param location string = resourceGroup().location
 
 @description('Admin password on all VMs.')
 @secure()
-param adminPassword string = newGuid()
+param adminPassword string
 
 //param VirtualMachineNetworkSecurityGroupId string = '/subscriptions/c4ad36f6-e6a1-405f-afd4-321e43455706/resourceGroups/nsgtest/providers/Microsoft.Network/networkSecurityGroups/man-NSG'
 

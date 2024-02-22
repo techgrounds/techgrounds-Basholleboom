@@ -192,7 +192,7 @@ resource networkSecurityGroup 'Microsoft.Network/networkSecurityGroups@2023-09-0
           destinationPortRange: '3389'
           protocol: 'Tcp'
           sourcePortRange: '*'
-          sourceAddressPrefix: '10.0.0.0' // Replace with the actual NSG ID of your VM
+          sourceAddressPrefix: '*' // Replace with the actual NSG ID of your VM
           destinationAddressPrefix: '*'
         }
       }
@@ -327,25 +327,25 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-09-01' = {
   }
 }
 
-resource vmExtension 'Microsoft.Compute/virtualMachines/extensions@2023-09-01' = if ((securityType == 'TrustedLaunch') && ((securityProfileJson.uefiSettings.secureBootEnabled == true) && (securityProfileJson.uefiSettings.vTpmEnabled == true))) {
-  parent: vm
-  name: extensionName
-  location: location
-  properties: {
-    publisher: extensionPublisher
-    type: extensionName
-    typeHandlerVersion: extensionVersion
-    autoUpgradeMinorVersion: true
-    enableAutomaticUpgrade: true
-    settings: {
-      AttestationConfig: {
-        MaaSettings: {
-          maaEndpoint: maaEndpoint
-          maaTenantName: maaTenantName
-        }
-      }
-    }
-  }
-}
+//resource vmExtension 'Microsoft.Compute/virtualMachines/extensions@2023-09-01' = if ((securityType == 'TrustedLaunch') && ((securityProfileJson.uefiSettings.secureBootEnabled == true) && (securityProfileJson.uefiSettings.vTpmEnabled == true))) {
+//  parent: vm
+//  name: extensionName
+//  location: location
+//  properties: {
+//    publisher: extensionPublisher
+//    type: extensionName
+//    typeHandlerVersion: extensionVersion
+//    autoUpgradeMinorVersion: true
+//    enableAutomaticUpgrade: true
+//    settings: {
+//      AttestationConfig: {
+//        MaaSettings: {
+//          maaEndpoint: maaEndpoint
+//          maaTenantName: maaTenantName
+//        }
+//      }
+//    }
+//  }
+//}
 
 output manhostname string = publicIp.properties.dnsSettings.fqdn

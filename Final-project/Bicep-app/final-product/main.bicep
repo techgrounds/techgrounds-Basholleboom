@@ -22,8 +22,8 @@ module manserver 'manserver.bicep' = {
 module webserver 'webserver.bicep' = {
 name: 'web-server'
 params:{
+  adminPassword: 'Hotnewpassword01'
   location:location
-//  virtualNetworkName: 'webpublicIP'
 }
 dependsOn:[keyvault]
 }
@@ -38,12 +38,3 @@ module peering 'peering.bicep' = {
   }
   dependsOn:[manserver, webserver]
 }
-
-//module backupvault 'recoveryservice.bicep' = {
-//  name: 'backup'
-//  params:{
-//    virtualMachineName: 'webvmss'
-//    virtualMachineResourceGroup: resourceGroup().name
-//  }
-//  dependsOn:[webserver]
-//}
